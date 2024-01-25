@@ -71,11 +71,32 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
+
 <div class="section level1">
-<div class="page-header"><h1 id="longitudinal-microbiome-toolkit-lmtk">Longitudinal Microbiome Toolkit (LMTK)<a class="anchor" aria-label="anchor" href="#longitudinal-microbiome-toolkit-lmtk"></a>
+<div class="page-header"><h1 id="legato-longitudinal-metagenomic-analysis-toolkit-">LegATo: Longitudinal mEtaGenomic Analysis Toolkit <img src="https://github.com/aubreyodom/Legato-docs/blob/main/legato-logo.jpg?raw=true" align="right" width="170"><a class="anchor" aria-label="anchor" href="#legato-longitudinal-metagenomic-analysis-toolkit-"></a>
 </h1></div>
-<p>A repository to hold the longitudinal microbiome toolkit (LMTK) package</p>
+<div class="section level2">
+<h2 id="what-is-legato">What is LegATo?<a class="anchor" aria-label="anchor" href="#what-is-legato"></a>
+</h2>
+<p>LegATo is a suite of open-source software tools for longitudinal microbiome analysis. It is extendable to several different study forms with optimal ease-of-use for researchers. Microbiome time-series data presents distinct challenges including complex covariate dependencies and variety of longitudinal study designs. This toolkit will allow researchers to determine which microbial taxa are affected over time by perturbations such as onset of disease or lifestyle choices, and to predict the effects of these perturbations over time, including changes in composition or stability of commensal bacteria.</p>
+<p>LegATo integrates visualization, modeling and testing procedures. It is currently in development, but it will soon be supplemented by hierarchical clustering tools and multivariate generalized estimating equations (JGEEs) to adjust for the compositional nature of microbiome data. Other tools will be implemented as needed.</p>
 </div>
+</div>
+<div class="section level1">
+<h1 id="documentation">Documentation<a class="anchor" aria-label="anchor" href="#documentation"></a>
+</h1>
+<p>Documentation and tutorials for LegATo are available at our <a href="https://github.com/aubreyodom/Legato" class="external-link">website</a>.</p>
+</div>
+<div class="section level1">
+<h1 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h1>
+<p>LegATo requires R Version 4.3.</p>
+<p>Install the development version of the package from Github:</p>
+<pre><code><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"devtools"</span>, quietly<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"aubreyodom/LegATo"</span><span class="op">)</span></span></code></pre>
+</div>
+
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
