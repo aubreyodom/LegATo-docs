@@ -1,4 +1,4 @@
-url: https://aubreyodom.github.io/legato-docs/
+url: https://aubreyodom.github.io/LegATo-docs/
 
 template:
   bootstrap: 5
@@ -31,5 +31,5 @@ authors:
     roles: [cre]
     text: "Site created by"
   sidebar:
-    roles: [aut, cre, ctb, csl, art]
+    roles: [aut, ctb, csl, art]
       
