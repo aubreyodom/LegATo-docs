@@ -1,0 +1,35 @@
+url: https://aubreyodom.github.io/legato-docs/
+
+template:
+  bootstrap: 5
+  bootswatch: cosmo
+    
+reference:
+ - title: "Your title here"
+   desc: "Description here"
+   contents:
+   - this_function
+
+navbar:
+  bg: dark
+  title: "LegATo"
+  left: 
+    - text: "Home"
+      href: index.html
+    - text: "Tutorial"
+      href: articles/LegATo_vignette.html
+    - text: "Function Reference"
+      href: reference/index.html
+    - text: "Package News"
+      href: news/index.html
+  right:
+    - icon: fa-github
+      href: https://github.com/aubreyodom/legato
+      
+authors:
+  footer:
+    roles: [cre]
+    text: "Site created by"
+  sidebar:
+    roles: [aut, cre, ctb, csl, art]
+      
