@@ -8,11 +8,11 @@ and aggregates them by one or more grouping vars within a unit."><!-- mathjax --
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-dark"><div class="container">
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-primary"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">LegATo</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.99.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,12 +90,16 @@ min_reads, max_reads and num_total.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">in_dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/MAE_small.RDS"</span>, package <span class="op">=</span> <span class="st">"LegATo"</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html" class="external-link">readRDS</a></span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in system.file("extdata/MAE_small.RDS", package = "LegATo") %&gt;%     readRDS():</span> could not find function "%&gt;%"</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">in_dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/MAE_small.RDS"</span>, package <span class="op">=</span> <span class="st">"LegATo"</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html" class="external-link">readRDS</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu">get_summary_table</span><span class="op">(</span><span class="va">in_dat</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Group"</span>, <span class="st">"Subject"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in h(simpleError(msg, call)):</span> error in evaluating the argument 'x' in selecting a method for function 'assays': object 'in_dat' not found</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">out</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'out' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Group Subject mean_reads  sd_reads min_reads max_reads num_total</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1     A      S1     7695.6  5583.400      1492     16804         5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2     A      S3    51285.0 68211.168       590    153641         5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3     A      S5    28239.8 50681.578      2829    118800         5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4     A      S7    24921.8 49282.734      1345    113053         5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5     A      S9    25595.8 23398.934      3428     64845         5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6     B     S10     3406.2  2668.049       911      7543         5</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
@@ -104,11 +108,11 @@ min_reads, max_reads and num_total.</p>
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p><p>Site created by Aubrey Odom.</p>
+  <p></p><p>NULL</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+  <p></p><p>NULL</p>
 </div>
 
     </footer></div>

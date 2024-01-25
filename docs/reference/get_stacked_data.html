@@ -12,11 +12,11 @@ chart. The function groups taxa and computes relative abundance within taxa stra
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-dark"><div class="container">
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-primary"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">LegATo</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.99.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -105,10 +105,219 @@ time-based covariate in the metadata to group abundances by.</p></dd>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">in_dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/MAE_small.RDS"</span>, package <span class="op">=</span> <span class="st">"LegATo"</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html" class="external-link">readRDS</a></span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in system.file("extdata/MAE_small.RDS", package = "LegATo") %&gt;%     readRDS():</span> could not find function "%&gt;%"</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">in_dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/MAE_small.RDS"</span>, package <span class="op">=</span> <span class="st">"LegATo"</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html" class="external-link">readRDS</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">get_stacked_data</span><span class="op">(</span><span class="va">in_dat</span>, <span class="st">"genus"</span>, covariate_1 <span class="op">=</span> <span class="st">"Sex"</span>, covariate_time <span class="op">=</span> <span class="st">"Month"</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in h(simpleError(msg, call)):</span> error in evaluating the argument 'x' in selecting a method for function 'assays': object 'in_dat' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  taxon covariate_1 covariate_t        value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1        Acinetobacter      Female           1 5.549263e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2            Aeromonas      Female           1 1.579758e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3     Alkalihalophilus      Female           1 1.042267e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4             Brucella      Female           1 1.057197e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5      Corynebacterium      Female           1 5.915736e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6        Cutibacterium      Female           1 2.979282e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7              Delftia      Female           1 2.440755e-06</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8         Enterobacter      Female           1 5.800568e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9          Escherichia      Female           1 3.678564e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10         Haemophilus      Female           1 6.209398e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11             Kocuria      Female           1 6.662898e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12            Listeria      Female           1 2.055714e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13           Moraxella      Female           1 6.377616e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14          Mycoplasma      Female           1 1.965690e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15  Noviherbaspirillum      Female           1 1.192899e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16               Other      Female           1 8.867107e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17          Paracoccus      Female           1 5.876816e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18         Pseudomonas      Female           1 3.701786e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19      Staphylococcus      Female           1 1.020357e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20       Streptococcus      Female           1 8.279496e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21           Weissella      Female           1 5.772429e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22       Acinetobacter        Male           1 7.653653e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23           Aeromonas        Male           1 6.454990e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24    Alkalihalophilus        Male           1 4.187020e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25            Brucella        Male           1 6.202516e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26     Corynebacterium        Male           1 8.361092e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27       Cutibacterium        Male           1 7.269789e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28             Delftia        Male           1 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29        Enterobacter        Male           1 6.140963e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30         Escherichia        Male           1 1.465457e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31         Haemophilus        Male           1 1.453136e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32             Kocuria        Male           1 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33            Listeria        Male           1 2.083036e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34           Moraxella        Male           1 1.994987e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35          Mycoplasma        Male           1 7.195907e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36  Noviherbaspirillum        Male           1 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37               Other        Male           1 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38          Paracoccus        Male           1 1.985546e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39         Pseudomonas        Male           1 5.732503e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40      Staphylococcus        Male           1 5.666421e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41       Streptococcus        Male           1 6.327726e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42           Weissella        Male           1 3.017109e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43       Acinetobacter      Female           2 2.437613e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44           Aeromonas      Female           2 1.391922e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45    Alkalihalophilus      Female           2 4.326438e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46            Brucella      Female           2 2.843060e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47     Corynebacterium      Female           2 2.906003e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48       Cutibacterium      Female           2 4.794796e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49             Delftia      Female           2 6.781684e-05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50        Enterobacter      Female           2 5.535890e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51         Escherichia      Female           2 9.204748e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52         Haemophilus      Female           2 1.273125e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53             Kocuria      Female           2 4.993988e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54            Listeria      Female           2 7.013477e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55           Moraxella      Female           2 1.312362e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56          Mycoplasma      Female           2 6.402683e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57  Noviherbaspirillum      Female           2 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58               Other      Female           2 7.413018e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59          Paracoccus      Female           2 7.040139e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60         Pseudomonas      Female           2 2.319198e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61      Staphylococcus      Female           2 1.932255e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62       Streptococcus      Female           2 2.539212e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63           Weissella      Female           2 3.849096e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64       Acinetobacter        Male           2 2.338258e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65           Aeromonas        Male           2 2.973978e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66    Alkalihalophilus        Male           2 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67            Brucella        Male           2 5.086937e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68     Corynebacterium        Male           2 3.780536e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69       Cutibacterium        Male           2 6.791380e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 70             Delftia        Male           2 4.247027e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 71        Enterobacter        Male           2 3.747377e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 72         Escherichia        Male           2 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 73         Haemophilus        Male           2 9.993005e-05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 74             Kocuria        Male           2 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 75            Listeria        Male           2 7.787796e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 76           Moraxella        Male           2 1.226766e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 77          Mycoplasma        Male           2 1.739804e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 78  Noviherbaspirillum        Male           2 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 79               Other        Male           2 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 80          Paracoccus        Male           2 1.469100e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 81         Pseudomonas        Male           2 5.504251e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 82      Staphylococcus        Male           2 4.970205e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 83       Streptococcus        Male           2 2.749029e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 84           Weissella        Male           2 5.094501e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 85       Acinetobacter      Female           3 4.473384e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 86           Aeromonas      Female           3 4.808669e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 87    Alkalihalophilus      Female           3 1.118665e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 88            Brucella      Female           3 2.775884e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 89     Corynebacterium      Female           3 2.163773e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 90       Cutibacterium      Female           3 1.254615e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 91             Delftia      Female           3 1.491449e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 92        Enterobacter      Female           3 3.696449e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 93         Escherichia      Female           3 2.238329e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 94         Haemophilus      Female           3 2.085964e-06</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 95             Kocuria      Female           3 8.285828e-05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 96            Listeria      Female           3 6.919301e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 97           Moraxella      Female           3 4.387693e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 98          Mycoplasma      Female           3 1.039901e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 99  Noviherbaspirillum      Female           3 2.213423e-05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 100              Other      Female           3 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 101         Paracoccus      Female           3 9.260826e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 102        Pseudomonas      Female           3 7.211173e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 103     Staphylococcus      Female           3 9.381225e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 104      Streptococcus      Female           3 1.906107e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 105          Weissella      Female           3 4.828210e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 106      Acinetobacter        Male           3 9.373308e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 107          Aeromonas        Male           3 2.760035e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 108   Alkalihalophilus        Male           3 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 109           Brucella        Male           3 7.346110e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 110    Corynebacterium        Male           3 8.611660e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 111      Cutibacterium        Male           3 1.326811e-05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 112            Delftia        Male           3 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 113       Enterobacter        Male           3 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 114        Escherichia        Male           3 2.760035e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 115        Haemophilus        Male           3 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 116            Kocuria        Male           3 8.845409e-06</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 117           Listeria        Male           3 1.563372e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 118          Moraxella        Male           3 2.624004e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 119         Mycoplasma        Male           3 6.059130e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 120 Noviherbaspirillum        Male           3 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 121              Other        Male           3 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 122         Paracoccus        Male           3 1.483868e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 123        Pseudomonas        Male           3 5.520069e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 124     Staphylococcus        Male           3 2.192964e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 125      Streptococcus        Male           3 4.654292e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 126          Weissella        Male           3 8.372311e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 127      Acinetobacter      Female           4 2.202415e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 128          Aeromonas      Female           4 5.550086e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 129   Alkalihalophilus      Female           4 5.488474e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 130           Brucella      Female           4 3.940695e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 131    Corynebacterium      Female           4 4.383634e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 132      Cutibacterium      Female           4 1.585227e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 133            Delftia      Female           4 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 134       Enterobacter      Female           4 6.485395e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 135        Escherichia      Female           4 3.270003e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 136        Haemophilus      Female           4 4.928350e-05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 137            Kocuria      Female           4 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 138           Listeria      Female           4 9.230997e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 139          Moraxella      Female           4 4.901624e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 140         Mycoplasma      Female           4 2.348193e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 141 Noviherbaspirillum      Female           4 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 142              Other      Female           4 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 143         Paracoccus      Female           4 1.065317e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 144        Pseudomonas      Female           4 4.782627e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 145     Staphylococcus      Female           4 7.375929e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 146      Streptococcus      Female           4 3.794768e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 147          Weissella      Female           4 6.277792e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 148      Acinetobacter        Male           4 5.518243e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 149          Aeromonas        Male           4 8.681639e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 150   Alkalihalophilus        Male           4 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 151           Brucella        Male           4 1.538370e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 152    Corynebacterium        Male           4 8.558884e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 153      Cutibacterium        Male           4 1.387925e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 154            Delftia        Male           4 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 155       Enterobacter        Male           4 3.855347e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 156        Escherichia        Male           4 5.078720e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 157        Haemophilus        Male           4 1.523616e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 158            Kocuria        Male           4 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 159           Listeria        Male           4 8.320981e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 160          Moraxella        Male           4 1.400762e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 161         Mycoplasma        Male           4 9.850046e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 162 Noviherbaspirillum        Male           4 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 163              Other        Male           4 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 164         Paracoccus        Male           4 8.275643e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 165        Pseudomonas        Male           4 9.242495e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 166     Staphylococcus        Male           4 1.387309e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 167      Streptococcus        Male           4 3.964288e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 168          Weissella        Male           4 1.512924e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 169      Acinetobacter      Female           5 4.208038e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 170          Aeromonas      Female           5 5.855805e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 171   Alkalihalophilus      Female           5 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 172           Brucella      Female           5 2.853741e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 173    Corynebacterium      Female           5 9.247282e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 174      Cutibacterium      Female           5 1.029391e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 175            Delftia      Female           5 1.217137e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 176       Enterobacter      Female           5 1.254729e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 177        Escherichia      Female           5 2.573825e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 178        Haemophilus      Female           5 6.746807e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 179            Kocuria      Female           5 1.887340e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 180           Listeria      Female           5 1.179112e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 181          Moraxella      Female           5 9.307237e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 182         Mycoplasma      Female           5 4.545103e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 183 Noviherbaspirillum      Female           5 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 184              Other      Female           5 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 185         Paracoccus      Female           5 9.647791e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 186        Pseudomonas      Female           5 1.919608e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 187     Staphylococcus      Female           5 1.452855e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 188      Streptococcus      Female           5 1.546484e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 189          Weissella      Female           5 4.071162e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 190      Acinetobacter        Male           5 7.451893e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 191          Aeromonas        Male           5 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 192   Alkalihalophilus        Male           5 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 193           Brucella        Male           5 1.470818e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 194    Corynebacterium        Male           5 3.768422e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 195      Cutibacterium        Male           5 8.509604e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 196            Delftia        Male           5 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 197       Enterobacter        Male           5 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 198        Escherichia        Male           5 7.292882e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 199        Haemophilus        Male           5 4.862631e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 200            Kocuria        Male           5 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 201           Listeria        Male           5 2.436014e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 202          Moraxella        Male           5 1.896149e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 203         Mycoplasma        Male           5 1.918182e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 204 Noviherbaspirillum        Male           5 3.646973e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 205              Other        Male           5 0.000000e+00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 206         Paracoccus        Male           5 3.731782e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 207        Pseudomonas        Male           5 1.614332e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 208     Staphylococcus        Male           5 9.094953e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 209      Streptococcus        Male           5 3.160710e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 210          Weissella        Male           5 6.977620e-03</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
@@ -117,11 +326,11 @@ time-based covariate in the metadata to group abundances by.</p></dd>
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p><p>Site created by Aubrey Odom.</p>
+  <p></p><p>NULL</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+  <p></p><p>NULL</p>
 </div>
 
     </footer></div>

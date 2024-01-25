@@ -16,11 +16,11 @@ levels are then consolidated into the category "Other".'><!-- mathjax --><script
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-dark"><div class="container">
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-primary"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">LegATo</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.99.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -100,10 +100,20 @@ animalcules output.</p></dd>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">in_dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/MAE_small.RDS"</span>, package <span class="op">=</span> <span class="st">"LegATo"</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html" class="external-link">readRDS</a></span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in system.file("extdata/MAE_small.RDS", package = "LegATo") %&gt;%     readRDS():</span> could not find function "%&gt;%"</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">in_dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/MAE_small.RDS"</span>, package <span class="op">=</span> <span class="st">"LegATo"</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html" class="external-link">readRDS</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">filter_animalcules_MAE</span><span class="op">(</span><span class="va">in_dat</span>, <span class="fl">0.01</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(expr, envir, enclos):</span> object 'in_dat' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A MultiAssayExperiment object of 1 listed</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  experiment with a user-defined name and respective class.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  Containing an ExperimentList class object of length 1:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] MicrobeGenetics: SummarizedExperiment with 92 rows and 50 columns</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Functionality:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  experiments() - obtain the ExperimentList instance</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  colData() - the primary/phenotype DataFrame</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  sampleMap() - the sample coordination DataFrame</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  `$`, `[`, `[[` - extract colData columns, subset, or experiment</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  *Format() - convert into a long or wide DataFrame</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  assays() - convert ExperimentList to a SimpleList of matrices</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  exportClass() - save data to flat files</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
@@ -112,11 +122,11 @@ animalcules output.</p></dd>
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p><p>Site created by Aubrey Odom.</p>
+  <p></p><p>NULL</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+  <p></p><p>NULL</p>
 </div>
 
     </footer></div>
