@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   LegATo_vignette: LegATo_vignette.html
   animalcules_MAE_formatting: docs/animalcules_MAE_formatting.html
-last_built: 2024-01-26T04:35Z
+last_built: 2024-01-26T16:38Z
 urls:
   reference: https://aubreyodom.github.io/LegATo-docs/reference
   article: https://aubreyodom.github.io/LegATo-docs/articles

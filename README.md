@@ -2,6 +2,6 @@
 
 A repository to hold the docs for the LegATo website.
 
-https://github.com/aubreyodom/LegATo
+https://github.com/wejlab/LegATo
 
-https://aubreyodom.github.io/LegATo-docs/
+https://wejlab.github.io/LegATo-docs/
