@@ -185,7 +185,7 @@ Infants from Odom et al.:</p>
 <h3 id="gee-modeling">GEE Modeling<a class="anchor" aria-label="anchor" href="#gee-modeling"></a>
 </h3>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">output</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/run_gee_model.html">run_gee_model</a></span><span class="op">(</span><span class="va">dat</span>, unit_var <span class="op">=</span> <span class="st">"Subject"</span>,</span>
+<code class="sourceCode R"><span><span class="va">output</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/run_gee_model.html">run_gee_model</a></span><span class="op">(</span><span class="va">dat_0.05</span>, unit_var <span class="op">=</span> <span class="st">"Subject"</span>,</span>
 <span>                        fixed_cov <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"HIVStatus"</span>, <span class="st">"MothChild"</span>, <span class="st">"Age"</span><span class="op">)</span>,</span>
 <span>                        corstr <span class="op">=</span> <span class="st">"ar1"</span>,</span>
 <span>                        plot_out <span class="op">=</span> <span class="cn">FALSE</span>,</span>
@@ -194,36 +194,133 @@ Infants from Odom et al.:</p>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">output</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">##   Coefficient Coefficient Estimate Standard Error Statistic Unadj p-value</span></span>
-<span><span class="co">## 1 (Intercept)           47024.4796      39794.316 1.3963874    0.23732938</span></span>
-<span><span class="co">## 2 (Intercept)            2070.1721       3238.258 0.4086862    0.52263712</span></span>
-<span><span class="co">## 3 (Intercept)            9530.8640       5106.186 3.4839455    0.06196683</span></span>
-<span><span class="co">## 4 (Intercept)           61209.2478      25927.329 5.5733783    0.01823554</span></span>
-<span><span class="co">## 5 (Intercept)           47416.3910      20515.628 5.3417968    0.02082000</span></span>
-<span><span class="co">## 6 (Intercept)            -701.1414       1529.727 0.2100794    0.64670520</span></span>
+<span><span class="co">## 1 (Intercept)            19688.134       6302.758 9.7577095   0.001785723</span></span>
+<span><span class="co">## 2 (Intercept)            47024.480      39794.316 1.3963874   0.237329377</span></span>
+<span><span class="co">## 3 (Intercept)             1649.273       3237.640 0.2594945   0.610467669</span></span>
+<span><span class="co">## 4 (Intercept)            61227.493      25929.320 5.5758453   0.018209873</span></span>
+<span><span class="co">## 5 (Intercept)            40215.335      20011.355 4.0385959   0.044470807</span></span>
+<span><span class="co">## 6 (Intercept)             5061.091       1762.443 8.2462798   0.004083561</span></span>
 <span><span class="co">##   Lower 95% CI Upper 95% CI           Taxon Adj p-value</span></span>
-<span><span class="co">## 1  -30970.9456   125019.905  Dolosigranulum   0.4669326</span></span>
-<span><span class="co">## 2   -4276.6975     8417.042   Streptococcus   0.6148113</span></span>
-<span><span class="co">## 3    -477.0759    19538.804       Moraxella   0.4669326</span></span>
-<span><span class="co">## 4   10392.6166   112025.879  Staphylococcus   0.4669326</span></span>
-<span><span class="co">## 5    7206.4993    87626.283 Corynebacterium   0.4669326</span></span>
-<span><span class="co">## 6   -3699.3512     2297.068     Haemophilus   0.7164696</span></span></code></pre>
+<span><span class="co">## 1    7334.9559    32041.313      Paracoccus  0.02142867</span></span>
+<span><span class="co">## 2  -30970.9456   125019.905  Dolosigranulum  0.28479525</span></span>
+<span><span class="co">## 3   -4696.3844     7994.931   Streptococcus  0.64669047</span></span>
+<span><span class="co">## 4   10406.9605   112048.026  Staphylococcus  0.05640766</span></span>
+<span><span class="co">## 5     993.8005    79436.869 Corynebacterium  0.10472664</span></span>
+<span><span class="co">## 6    1606.7658     8515.415           Other  0.02450136</span></span></code></pre>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Trying out plotting</span></span>
-<span><span class="co">#run_gee_model(dat, unit_var = "Subject",</span></span>
-<span><span class="co">#              taxon_level = "genus",</span></span>
-<span><span class="co">#              fixed_cov = c("MothChild", "HIVStatus", "Age"),</span></span>
-<span><span class="co">#              corstr = "ar1",</span></span>
-<span><span class="co">#              plot_out = TRUE,</span></span>
-<span><span class="co">#              plotsave_loc = #"/restricted/projectnb/infant-microbiome/work/aodom",</span></span>
-<span><span class="co">#              plot_terms = "MothChild",</span></span>
-<span><span class="co">#              width = 6, height = 4, units = "in", scale = 0.7)</span></span>
-<span><span class="co">#</span></span></code></pre></div>
+<span><span class="fu"><a href="../reference/run_gee_model.html">run_gee_model</a></span><span class="op">(</span><span class="va">dat_0.05</span>, unit_var <span class="op">=</span> <span class="st">"Subject"</span>,</span>
+<span>              taxon_level <span class="op">=</span> <span class="st">"genus"</span>,</span>
+<span>              fixed_cov <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"MothChild"</span>, <span class="st">"HIVStatus"</span>, <span class="st">"Age"</span><span class="op">)</span>,</span>
+<span>              corstr <span class="op">=</span> <span class="st">"ar1"</span>,</span>
+<span>              plot_out <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>              plotsave_loc <span class="op">=</span> <span class="st">"/restricted/projectnb/infant-microbiome/work/aodom"</span>,</span>
+<span>              plot_terms <span class="op">=</span> <span class="st">"MothChild"</span>,</span>
+<span>              width <span class="op">=</span> <span class="fl">6</span>, height <span class="op">=</span> <span class="fl">4</span>, units <span class="op">=</span> <span class="st">"in"</span>, scale <span class="op">=</span> <span class="fl">0.7</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">##        Coefficient Coefficient Estimate Standard Error    Statistic</span></span>
+<span><span class="co">## 1      (Intercept)         1.968813e+04   6.302758e+03 9.757710e+00</span></span>
+<span><span class="co">## 2      (Intercept)         4.702448e+04   3.979432e+04 1.396387e+00</span></span>
+<span><span class="co">## 3      (Intercept)         1.649273e+03   3.237640e+03 2.594945e-01</span></span>
+<span><span class="co">## 4      (Intercept)         6.122749e+04   2.592932e+04 5.575845e+00</span></span>
+<span><span class="co">## 5      (Intercept)         4.021533e+04   2.001135e+04 4.038596e+00</span></span>
+<span><span class="co">## 6      (Intercept)         5.061091e+03   1.762443e+03 8.246280e+00</span></span>
+<span><span class="co">## 7      (Intercept)        -7.011732e+02   1.529728e+03 2.100982e-01</span></span>
+<span><span class="co">## 8      (Intercept)         5.014573e+02   2.760020e+02 3.300985e+00</span></span>
+<span><span class="co">## 9      (Intercept)         1.871530e+03   9.646392e+02 3.764123e+00</span></span>
+<span><span class="co">## 10     (Intercept)         3.658252e+03   3.006672e+03 1.480386e+00</span></span>
+<span><span class="co">## 11     (Intercept)         2.959834e+02   1.259813e+02 5.519786e+00</span></span>
+<span><span class="co">## 12     (Intercept)         5.203975e+02   3.693658e+02 1.984984e+00</span></span>
+<span><span class="co">## 13             Age         2.655674e+01   7.763571e+01 1.170109e-01</span></span>
+<span><span class="co">## 14             Age        -7.787051e+00   1.913911e+02 1.655398e-03</span></span>
+<span><span class="co">## 15             Age         1.929738e+02   4.584825e+01 1.771540e+01</span></span>
+<span><span class="co">## 16             Age        -6.079942e+02   2.196734e+02 7.660267e+00</span></span>
+<span><span class="co">## 17             Age        -2.590372e+02   1.661664e+02 2.430177e+00</span></span>
+<span><span class="co">## 18             Age        -2.346838e+01   2.343107e+01 1.003187e+00</span></span>
+<span><span class="co">## 19             Age         1.421445e+02   3.861311e+01 1.355160e+01</span></span>
+<span><span class="co">## 20             Age         8.214144e-01   2.522884e+00 1.060059e-01</span></span>
+<span><span class="co">## 21             Age        -5.490882e+00   9.270816e+00 3.507908e-01</span></span>
+<span><span class="co">## 22             Age        -5.856951e+01   4.881361e+01 1.439664e+00</span></span>
+<span><span class="co">## 23             Age         1.538404e+00   2.175117e+00 5.002363e-01</span></span>
+<span><span class="co">## 24             Age         7.461006e-01   3.586369e+00 4.327977e-02</span></span>
+<span><span class="co">## 25    HIVStatusHIV         7.228454e+02   5.200387e+03 1.932055e-02</span></span>
+<span><span class="co">## 26    HIVStatusHIV        -3.159071e+04   2.628864e+04 1.444052e+00</span></span>
+<span><span class="co">## 27    HIVStatusHIV         5.932463e+03   4.843201e+03 1.500393e+00</span></span>
+<span><span class="co">## 28    HIVStatusHIV        -1.096237e+04   1.252348e+04 7.662288e-01</span></span>
+<span><span class="co">## 29    HIVStatusHIV        -1.582424e+04   1.041180e+04 2.309906e+00</span></span>
+<span><span class="co">## 30    HIVStatusHIV         2.062332e+02   1.691575e+03 1.486396e-02</span></span>
+<span><span class="co">## 31    HIVStatusHIV         3.974993e+02   3.103528e+03 1.640444e-02</span></span>
+<span><span class="co">## 32    HIVStatusHIV        -3.401443e+02   5.461223e+02 3.879239e-01</span></span>
+<span><span class="co">## 33    HIVStatusHIV        -1.193087e+03   7.554959e+02 2.493906e+00</span></span>
+<span><span class="co">## 34    HIVStatusHIV         2.173039e+03   1.800209e+03 1.457099e+00</span></span>
+<span><span class="co">## 35    HIVStatusHIV        -2.052954e+00   3.533814e+02 3.374978e-05</span></span>
+<span><span class="co">## 36    HIVStatusHIV        -7.298865e+01   3.210760e+02 5.167672e-02</span></span>
+<span><span class="co">## 37 MothChildMother        -2.684380e+05   7.718724e+05 1.209475e-01</span></span>
+<span><span class="co">## 38 MothChildMother         5.544548e+04   1.887806e+06 8.626163e-04</span></span>
+<span><span class="co">## 39 MothChildMother        -1.920733e+06   4.576561e+05 1.761389e+01</span></span>
+<span><span class="co">## 40 MothChildMother         6.030711e+06   2.176539e+06 7.677225e+00</span></span>
+<span><span class="co">## 41 MothChildMother         2.565470e+06   1.646840e+06 2.426783e+00</span></span>
+<span><span class="co">## 42 MothChildMother         2.393347e+05   2.328444e+05 1.056525e+00</span></span>
+<span><span class="co">## 43 MothChildMother        -1.417849e+06   3.856772e+05 1.351487e+01</span></span>
+<span><span class="co">## 44 MothChildMother        -6.749208e+03   2.534460e+04 7.091443e-02</span></span>
+<span><span class="co">## 45 MothChildMother         5.539159e+04   9.220013e+04 3.609313e-01</span></span>
+<span><span class="co">## 46 MothChildMother         5.810005e+05   4.842269e+05 1.439644e+00</span></span>
+<span><span class="co">## 47 MothChildMother        -1.486818e+04   2.183899e+04 4.635005e-01</span></span>
+<span><span class="co">## 48 MothChildMother        -7.730927e+03   3.569743e+04 4.690178e-02</span></span>
+<span><span class="co">##    Unadj p-value  Lower 95% CI  Upper 95% CI            Taxon Adj p-value</span></span>
+<span><span class="co">## 1   1.785723e-03  7.334956e+03  3.204131e+04       Paracoccus 0.021428671</span></span>
+<span><span class="co">## 2   2.373294e-01 -3.097095e+04  1.250199e+05   Dolosigranulum 0.284795253</span></span>
+<span><span class="co">## 3   6.104677e-01 -4.696384e+03  7.994931e+03    Streptococcus 0.646690469</span></span>
+<span><span class="co">## 4   1.820987e-02  1.040696e+04  1.120480e+05   Staphylococcus 0.056407664</span></span>
+<span><span class="co">## 5   4.447081e-02  9.938005e+02  7.943687e+04  Corynebacterium 0.104726641</span></span>
+<span><span class="co">## 6   4.083561e-03  1.606766e+03  8.515415e+03            Other 0.024501364</span></span>
+<span><span class="co">## 7   6.466905e-01 -3.699385e+03  2.297038e+03      Haemophilus 0.646690469</span></span>
+<span><span class="co">## 8   6.923834e-02 -3.949660e+01  1.042411e+03 Alkalihalophilus 0.118694299</span></span>
+<span><span class="co">## 9   5.236332e-02 -1.912810e+01  3.762188e+03    Acinetobacter 0.104726641</span></span>
+<span><span class="co">## 10  2.237141e-01 -2.234717e+03  9.551221e+03      Pseudomonas 0.284795253</span></span>
+<span><span class="co">## 11  1.880255e-02  4.906451e+01  5.429022e+02          Delftia 0.056407664</span></span>
+<span><span class="co">## 12  1.588663e-01 -2.035462e+02  1.244341e+03        Moraxella 0.238299490</span></span>
+<span><span class="co">## 13  7.322992e-01 -1.256065e+02  1.787199e+02       Paracoccus 0.893685597</span></span>
+<span><span class="co">## 14  9.675458e-01 -3.829068e+02  3.673327e+02   Dolosigranulum 0.967545761</span></span>
+<span><span class="co">## 15  2.565409e-05  1.031128e+02  2.828347e+02    Streptococcus 0.000307849</span></span>
+<span><span class="co">## 16  5.645014e-03 -1.038546e+03 -1.774423e+02   Staphylococcus 0.022580057</span></span>
+<span><span class="co">## 17  1.190195e-01 -5.847174e+02  6.664296e+01  Corynebacterium 0.357058434</span></span>
+<span><span class="co">## 18  3.165406e-01 -6.939244e+01  2.245568e+01            Other 0.633081210</span></span>
+<span><span class="co">## 19  2.320930e-04  6.646422e+01  2.178248e+02      Haemophilus 0.001392558</span></span>
+<span><span class="co">## 20  7.447380e-01 -4.123347e+00  5.766176e+00 Alkalihalophilus 0.893685597</span></span>
+<span><span class="co">## 21  5.536658e-01 -2.366135e+01  1.267958e+01    Acinetobacter 0.830498714</span></span>
+<span><span class="co">## 22  2.301937e-01 -1.542424e+02  3.710342e+01      Pseudomonas 0.552464867</span></span>
+<span><span class="co">## 23  4.793963e-01 -2.724748e+00  5.801556e+00          Delftia 0.821822226</span></span>
+<span><span class="co">## 24  8.351994e-01 -6.283053e+00  7.775254e+00        Moraxella 0.911126590</span></span>
+<span><span class="co">## 25  8.894514e-01 -9.469727e+03  1.091542e+04       Paracoccus 0.985051734</span></span>
+<span><span class="co">## 26  2.294848e-01 -8.311549e+04  1.993407e+04   Dolosigranulum 0.550763508</span></span>
+<span><span class="co">## 27  2.206109e-01 -3.560037e+03  1.542496e+04    Streptococcus 0.550763508</span></span>
+<span><span class="co">## 28  3.813862e-01 -3.550794e+04  1.358321e+04   Staphylococcus 0.762772450</span></span>
+<span><span class="co">## 29  1.285518e-01 -3.623098e+04  4.582507e+03  Corynebacterium 0.550763508</span></span>
+<span><span class="co">## 30  9.029641e-01 -3.109193e+03  3.521660e+03            Other 0.985051734</span></span>
+<span><span class="co">## 31  8.980858e-01 -5.685303e+03  6.480302e+03      Haemophilus 0.985051734</span></span>
+<span><span class="co">## 32  5.333927e-01 -1.410524e+03  7.302358e+02 Alkalihalophilus 0.914387499</span></span>
+<span><span class="co">## 33  1.142878e-01 -2.673832e+03  2.876576e+02    Acinetobacter 0.550763508</span></span>
+<span><span class="co">## 34  2.273923e-01 -1.355307e+03  5.701384e+03      Pseudomonas 0.550763508</span></span>
+<span><span class="co">## 35  9.953648e-01 -6.946678e+02  6.905619e+02          Delftia 0.995364751</span></span>
+<span><span class="co">## 36  8.201709e-01 -7.022861e+02  5.563088e+02        Moraxella 0.985051734</span></span>
+<span><span class="co">## 37  7.280091e-01 -1.781280e+06  1.244404e+06       Paracoccus 0.903867148</span></span>
+<span><span class="co">## 38  9.765692e-01 -3.644586e+06  3.755477e+06   Dolosigranulum 0.976569236</span></span>
+<span><span class="co">## 39  2.706050e-05 -2.817722e+06 -1.023743e+06    Streptococcus 0.000324726</span></span>
+<span><span class="co">## 40  5.592208e-03  1.764774e+06  1.029665e+07   Staphylococcus 0.022368834</span></span>
+<span><span class="co">## 41  1.192775e-01 -6.622778e+05  5.793218e+06  Corynebacterium 0.357832446</span></span>
+<span><span class="co">## 42  3.040091e-01 -2.170319e+05  6.957014e+05            Other 0.608018197</span></span>
+<span><span class="co">## 43  2.366803e-04 -2.173762e+06 -6.619354e+05      Haemophilus 0.001420082</span></span>
+<span><span class="co">## 44  7.900100e-01 -5.642372e+04  4.292530e+04 Alkalihalophilus 0.903867148</span></span>
+<span><span class="co">## 45  5.479895e-01 -1.253173e+05  2.361005e+05    Acinetobacter 0.821984202</span></span>
+<span><span class="co">## 46  2.301969e-01 -3.680668e+05  1.530068e+06      Pseudomonas 0.552472666</span></span>
+<span><span class="co">## 47  4.959926e-01 -5.767182e+04  2.793546e+04          Delftia 0.821984202</span></span>
+<span><span class="co">## 48  8.285449e-01 -7.769660e+04  6.223475e+04        Moraxella 0.903867148</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
 <h2 id="add-hotelling">Add hotelling<a class="anchor" aria-label="anchor" href="#add-hotelling"></a>
 </h2>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/test_hotelling_t2.html">test_hotelling_t2</a></span><span class="op">(</span>dat <span class="op">=</span> <span class="va">dat_0.05</span>,</span>
 <span>                  test_index <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="va">dat_0.05</span><span class="op">$</span><span class="va">MothChild</span> <span class="op">==</span> <span class="st">"Infant"</span> <span class="op">&amp;</span></span>
 <span>                                       <span class="va">dat_0.05</span><span class="op">$</span><span class="va">timepoint</span> <span class="op">==</span> <span class="fl">6</span><span class="op">)</span>,</span>
@@ -247,7 +344,7 @@ Infants from Odom et al.:</p>
 <span><span class="co">## </span></span>
 <span><span class="co">## $pvalue</span></span>
 <span><span class="co">## [1] 0.3056466</span></span></code></pre>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/test_hotelling_t2.html">test_hotelling_t2</a></span><span class="op">(</span>dat <span class="op">=</span> <span class="va">dat_0.05</span>,</span>
 <span>                  test_index <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="va">dat_0.05</span><span class="op">$</span><span class="va">MothChild</span> <span class="op">==</span> <span class="st">"Mother"</span> <span class="op">&amp;</span></span>
 <span>                                      <span class="va">dat_0.05</span><span class="op">$</span><span class="va">timepoint</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span>,</span>
@@ -271,7 +368,7 @@ Infants from Odom et al.:</p>
 <span><span class="co">## </span></span>
 <span><span class="co">## $pvalue</span></span>
 <span><span class="co">## [1] 0.875078</span></span></code></pre>
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html" class="external-link">sessionInfo</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## R version 4.3.1 (2023-06-16)</span></span>
 <span><span class="co">## Platform: x86_64-pc-linux-gnu (64-bit)</span></span>
@@ -301,74 +398,82 @@ Infants from Odom et al.:</p>
 <span><span class="co">## loaded via a namespace (and not attached):</span></span>
 <span><span class="co">##   [1] rstudioapi_0.15.0           jsonlite_1.8.8             </span></span>
 <span><span class="co">##   [3] umap_0.2.10.0               MultiAssayExperiment_1.28.0</span></span>
-<span><span class="co">##   [5] magrittr_2.0.3              farver_2.1.1               </span></span>
-<span><span class="co">##   [7] rmarkdown_2.25              geepack_1.3.9              </span></span>
-<span><span class="co">##   [9] fs_1.6.3                    zlibbioc_1.48.0            </span></span>
-<span><span class="co">##  [11] ragg_1.2.5                  vctrs_0.6.5                </span></span>
-<span><span class="co">##  [13] memoise_2.0.1               RCurl_1.98-1.14            </span></span>
-<span><span class="co">##  [15] askpass_1.2.0               BiocBaseUtils_1.4.0        </span></span>
-<span><span class="co">##  [17] htmltools_0.5.7             S4Arrays_1.2.0             </span></span>
-<span><span class="co">##  [19] broom_1.0.5                 SparseArray_1.2.3          </span></span>
-<span><span class="co">##  [21] sass_0.4.8                  TBSignatureProfiler_1.15.0 </span></span>
-<span><span class="co">##  [23] bslib_0.6.1                 htmlwidgets_1.6.4          </span></span>
-<span><span class="co">##  [25] desc_1.4.3                  plyr_1.8.9                 </span></span>
-<span><span class="co">##  [27] covr_3.6.2                  plotly_4.10.2              </span></span>
-<span><span class="co">##  [29] cachem_1.0.8                lifecycle_1.0.4            </span></span>
-<span><span class="co">##  [31] iterators_1.0.14            pkgconfig_2.0.3            </span></span>
-<span><span class="co">##  [33] Matrix_1.6-5                R6_2.5.1                   </span></span>
-<span><span class="co">##  [35] fastmap_1.1.1               GenomeInfoDbData_1.2.11    </span></span>
-<span><span class="co">##  [37] MatrixGenerics_1.14.0       clue_0.3-65                </span></span>
-<span><span class="co">##  [39] digest_0.6.34               colorspace_2.1-0           </span></span>
-<span><span class="co">##  [41] spatial_7.3-16              S4Vectors_0.40.2           </span></span>
-<span><span class="co">##  [43] DESeq2_1.40.1               RSpectra_0.16-1            </span></span>
-<span><span class="co">##  [45] textshaping_0.3.6           GenomicRanges_1.54.1       </span></span>
-<span><span class="co">##  [47] vegan_2.6-4                 labeling_0.4.3             </span></span>
-<span><span class="co">##  [49] fansi_1.0.6                 httr_1.4.7                 </span></span>
-<span><span class="co">##  [51] abind_1.4-5                 mgcv_1.8-42                </span></span>
-<span><span class="co">##  [53] compiler_4.3.1              withr_3.0.0                </span></span>
-<span><span class="co">##  [55] backports_1.4.1             inline_0.3.19              </span></span>
-<span><span class="co">##  [57] BiocParallel_1.36.0         highr_0.10                 </span></span>
-<span><span class="co">##  [59] MASS_7.3-60                 tsne_0.1-3.1               </span></span>
-<span><span class="co">##  [61] openssl_2.1.1               DelayedArray_0.28.0        </span></span>
-<span><span class="co">##  [63] fBasics_4022.94.9000        permute_0.9-7              </span></span>
-<span><span class="co">##  [65] tools_4.3.1                 ape_5.7-1                  </span></span>
-<span><span class="co">##  [67] rentrez_1.2.3               glue_1.7.0                 </span></span>
-<span><span class="co">##  [69] stabledist_0.7-1            nlme_3.1-162               </span></span>
-<span><span class="co">##  [71] grid_4.3.1                  cluster_2.1.4              </span></span>
-<span><span class="co">##  [73] reshape2_1.4.4              generics_0.1.3             </span></span>
-<span><span class="co">##  [75] gtable_0.3.4                tidyr_1.3.0                </span></span>
-<span><span class="co">##  [77] data.table_1.14.10          utf8_1.2.4                 </span></span>
-<span><span class="co">##  [79] XVector_0.42.0              rmutil_1.1.10              </span></span>
-<span><span class="co">##  [81] BiocGenerics_0.48.1         ggrepel_0.9.3              </span></span>
-<span><span class="co">##  [83] foreach_1.5.2               pillar_1.9.0               </span></span>
-<span><span class="co">##  [85] stringr_1.5.1               limma_3.56.2               </span></span>
-<span><span class="co">##  [87] splines_4.3.1               dplyr_1.1.4                </span></span>
-<span><span class="co">##  [89] lattice_0.21-8              GUniFrac_1.8               </span></span>
-<span><span class="co">##  [91] tidyselect_1.2.0            locfit_1.5-9.8             </span></span>
-<span><span class="co">##  [93] knitr_1.45                  bookdown_0.34              </span></span>
-<span><span class="co">##  [95] IRanges_2.36.0              edgeR_3.42.4               </span></span>
-<span><span class="co">##  [97] SummarizedExperiment_1.32.0 stats4_4.3.1               </span></span>
-<span><span class="co">##  [99] xfun_0.41                   Biobase_2.62.0             </span></span>
-<span><span class="co">## [101] statmod_1.5.0               timeDate_4032.109          </span></span>
-<span><span class="co">## [103] matrixStats_1.2.0           DT_0.28                    </span></span>
-<span><span class="co">## [105] rex_1.2.1                   stringi_1.8.3              </span></span>
-<span><span class="co">## [107] lazyeval_0.2.2              yaml_2.3.8                 </span></span>
-<span><span class="co">## [109] evaluate_0.23               codetools_0.2-19           </span></span>
-<span><span class="co">## [111] timeSeries_4030.106.9000    tibble_3.2.1               </span></span>
-<span><span class="co">## [113] BiocManager_1.30.22         cli_3.6.2                  </span></span>
-<span><span class="co">## [115] rpart_4.1.19                reticulate_1.30            </span></span>
-<span><span class="co">## [117] systemfonts_1.0.4           munsell_0.5.0              </span></span>
-<span><span class="co">## [119] jquerylib_0.1.4             Rcpp_1.0.12                </span></span>
-<span><span class="co">## [121] GenomeInfoDb_1.38.5         stable_1.1.6               </span></span>
-<span><span class="co">## [123] png_0.1-8                   XML_3.99-0.16              </span></span>
-<span><span class="co">## [125] parallel_4.3.1              modeest_2.4.0              </span></span>
-<span><span class="co">## [127] ellipsis_0.3.2              pkgdown_2.0.7              </span></span>
-<span><span class="co">## [129] ggplot2_3.4.4               assertthat_0.2.1           </span></span>
-<span><span class="co">## [131] animalcules_1.18.2          ggalluvial_0.12.5          </span></span>
-<span><span class="co">## [133] bitops_1.0-7                viridisLite_0.4.2          </span></span>
-<span><span class="co">## [135] scales_1.3.0                statip_0.2.3               </span></span>
-<span><span class="co">## [137] purrr_1.0.2                 crayon_1.5.2               </span></span>
-<span><span class="co">## [139] rlang_1.1.3                 shinyjs_2.1.0</span></span></code></pre>
+<span><span class="co">##   [5] magrittr_2.0.3              TH.data_1.1-2              </span></span>
+<span><span class="co">##   [7] estimability_1.4.1          farver_2.1.1               </span></span>
+<span><span class="co">##   [9] rmarkdown_2.25              geepack_1.3.9              </span></span>
+<span><span class="co">##  [11] fs_1.6.3                    zlibbioc_1.48.0            </span></span>
+<span><span class="co">##  [13] ragg_1.2.5                  vctrs_0.6.5                </span></span>
+<span><span class="co">##  [15] memoise_2.0.1               RCurl_1.98-1.14            </span></span>
+<span><span class="co">##  [17] askpass_1.2.0               BiocBaseUtils_1.4.0        </span></span>
+<span><span class="co">##  [19] forcats_1.0.0               htmltools_0.5.7            </span></span>
+<span><span class="co">##  [21] S4Arrays_1.2.0              haven_2.5.4                </span></span>
+<span><span class="co">##  [23] broom_1.0.5                 SparseArray_1.2.3          </span></span>
+<span><span class="co">##  [25] sass_0.4.8                  TBSignatureProfiler_1.15.0 </span></span>
+<span><span class="co">##  [27] bslib_0.6.1                 htmlwidgets_1.6.4          </span></span>
+<span><span class="co">##  [29] desc_1.4.3                  sandwich_3.1-0             </span></span>
+<span><span class="co">##  [31] plyr_1.8.9                  covr_3.6.2                 </span></span>
+<span><span class="co">##  [33] zoo_1.8-12                  emmeans_1.9.0              </span></span>
+<span><span class="co">##  [35] plotly_4.10.2               cachem_1.0.8               </span></span>
+<span><span class="co">##  [37] lifecycle_1.0.4             iterators_1.0.14           </span></span>
+<span><span class="co">##  [39] pkgconfig_2.0.3             Matrix_1.6-5               </span></span>
+<span><span class="co">##  [41] R6_2.5.1                    fastmap_1.1.1              </span></span>
+<span><span class="co">##  [43] GenomeInfoDbData_1.2.11     MatrixGenerics_1.14.0      </span></span>
+<span><span class="co">##  [45] clue_0.3-65                 digest_0.6.34              </span></span>
+<span><span class="co">##  [47] colorspace_2.1-0            spatial_7.3-16             </span></span>
+<span><span class="co">##  [49] S4Vectors_0.40.2            DESeq2_1.40.1              </span></span>
+<span><span class="co">##  [51] RSpectra_0.16-1             textshaping_0.3.6          </span></span>
+<span><span class="co">##  [53] GenomicRanges_1.54.1        vegan_2.6-4                </span></span>
+<span><span class="co">##  [55] labeling_0.4.3              fansi_1.0.6                </span></span>
+<span><span class="co">##  [57] httr_1.4.7                  abind_1.4-5                </span></span>
+<span><span class="co">##  [59] mgcv_1.8-42                 compiler_4.3.1             </span></span>
+<span><span class="co">##  [61] withr_3.0.0                 backports_1.4.1            </span></span>
+<span><span class="co">##  [63] inline_0.3.19               BiocParallel_1.36.0        </span></span>
+<span><span class="co">##  [65] highr_0.10                  MASS_7.3-60                </span></span>
+<span><span class="co">##  [67] tsne_0.1-3.1                openssl_2.1.1              </span></span>
+<span><span class="co">##  [69] DelayedArray_0.28.0         fBasics_4022.94.9000       </span></span>
+<span><span class="co">##  [71] permute_0.9-7               tools_4.3.1                </span></span>
+<span><span class="co">##  [73] ape_5.7-1                   rentrez_1.2.3              </span></span>
+<span><span class="co">##  [75] glue_1.7.0                  stabledist_0.7-1           </span></span>
+<span><span class="co">##  [77] nlme_3.1-162                grid_4.3.1                 </span></span>
+<span><span class="co">##  [79] cluster_2.1.4               reshape2_1.4.4             </span></span>
+<span><span class="co">##  [81] generics_0.1.3              gtable_0.3.4               </span></span>
+<span><span class="co">##  [83] tidyr_1.3.0                 hms_1.1.3                  </span></span>
+<span><span class="co">##  [85] data.table_1.14.10          utf8_1.2.4                 </span></span>
+<span><span class="co">##  [87] XVector_0.42.0              rmutil_1.1.10              </span></span>
+<span><span class="co">##  [89] BiocGenerics_0.48.1         ggrepel_0.9.3              </span></span>
+<span><span class="co">##  [91] foreach_1.5.2               pillar_1.9.0               </span></span>
+<span><span class="co">##  [93] stringr_1.5.1               limma_3.56.2               </span></span>
+<span><span class="co">##  [95] splines_4.3.1               dplyr_1.1.4                </span></span>
+<span><span class="co">##  [97] lattice_0.21-8              survival_3.5-5             </span></span>
+<span><span class="co">##  [99] GUniFrac_1.8                tidyselect_1.2.0           </span></span>
+<span><span class="co">## [101] locfit_1.5-9.8              knitr_1.45                 </span></span>
+<span><span class="co">## [103] bookdown_0.34               IRanges_2.36.0             </span></span>
+<span><span class="co">## [105] edgeR_3.42.4                SummarizedExperiment_1.32.0</span></span>
+<span><span class="co">## [107] stats4_4.3.1                xfun_0.41                  </span></span>
+<span><span class="co">## [109] Biobase_2.62.0              statmod_1.5.0              </span></span>
+<span><span class="co">## [111] timeDate_4032.109           matrixStats_1.2.0          </span></span>
+<span><span class="co">## [113] DT_0.28                     rex_1.2.1                  </span></span>
+<span><span class="co">## [115] stringi_1.8.3               lazyeval_0.2.2             </span></span>
+<span><span class="co">## [117] yaml_2.3.8                  evaluate_0.23              </span></span>
+<span><span class="co">## [119] codetools_0.2-19            timeSeries_4030.106.9000   </span></span>
+<span><span class="co">## [121] tibble_3.2.1                BiocManager_1.30.22        </span></span>
+<span><span class="co">## [123] cli_3.6.2                   rpart_4.1.19               </span></span>
+<span><span class="co">## [125] xtable_1.8-4                reticulate_1.30            </span></span>
+<span><span class="co">## [127] systemfonts_1.0.4           munsell_0.5.0              </span></span>
+<span><span class="co">## [129] jquerylib_0.1.4             Rcpp_1.0.12                </span></span>
+<span><span class="co">## [131] GenomeInfoDb_1.38.5         ggeffects_1.3.4            </span></span>
+<span><span class="co">## [133] stable_1.1.6                coda_0.19-4                </span></span>
+<span><span class="co">## [135] png_0.1-8                   XML_3.99-0.16              </span></span>
+<span><span class="co">## [137] parallel_4.3.1              modeest_2.4.0              </span></span>
+<span><span class="co">## [139] ellipsis_0.3.2              pkgdown_2.0.7              </span></span>
+<span><span class="co">## [141] ggplot2_3.4.4               assertthat_0.2.1           </span></span>
+<span><span class="co">## [143] animalcules_1.18.2          ggalluvial_0.12.5          </span></span>
+<span><span class="co">## [145] bitops_1.0-7                mvtnorm_1.2-4              </span></span>
+<span><span class="co">## [147] viridisLite_0.4.2           scales_1.3.0               </span></span>
+<span><span class="co">## [149] insight_0.19.7              statip_0.2.3               </span></span>
+<span><span class="co">## [151] purrr_1.0.2                 crayon_1.5.2               </span></span>
+<span><span class="co">## [153] rlang_1.1.3                 multcomp_1.4-25            </span></span>
+<span><span class="co">## [155] shinyjs_2.1.0</span></span></code></pre>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>

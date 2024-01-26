@@ -31,7 +31,13 @@
     <loc>https://aubreyodom.github.io/LegATo-docs/reference/LegATo-package.html</loc>
   </url>
   <url>
+    <loc>https://aubreyodom.github.io/LegATo-docs/reference/NMIT.html</loc>
+  </url>
+  <url>
     <loc>https://aubreyodom.github.io/LegATo-docs/reference/clean_animalcules_MAE.html</loc>
+  </url>
+  <url>
+    <loc>https://aubreyodom.github.io/LegATo-docs/reference/create_formatted_MAE.html</loc>
   </url>
   <url>
     <loc>https://aubreyodom.github.io/LegATo-docs/reference/filter_animalcules_MAE.html</loc>
@@ -71,5 +77,8 @@
   </url>
   <url>
     <loc>https://aubreyodom.github.io/LegATo-docs/reference/test_hotelling_t2.html</loc>
+  </url>
+  <url>
+    <loc>https://aubreyodom.github.io/LegATo-docs/reference/tscor.html</loc>
   </url>
 </urlset>
