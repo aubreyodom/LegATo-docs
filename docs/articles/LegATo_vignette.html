@@ -6,12 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="LegATo">
-<title>Introduction to LegATo • LegATo</title>
+<title>LegATo Tutorial • LegATo</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Introduction to LegATo">
+<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="LegATo Tutorial">
 <meta property="og:description" content="LegATo">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -42,6 +42,9 @@
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-tutorials">Tutorials</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-tutorials">
     <a class="dropdown-item" href="../articles/LegATo_vignette.html">Command Line Analysis</a>
+    <a class="dropdown-item" href="../articles/NMIT.html">NMIT</a>
+    <a class="dropdown-item" href="../articles/Modeling.html">Modeling with GEEs and LMMs</a>
+    <a class="dropdown-item" href="../articles/Hotelling.html">Hotelling's T-Squared Test</a>
   </div>
 </li>
 <li class="nav-item">
@@ -74,7 +77,7 @@
 
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="" class="logo" alt=""><h1>Introduction to LegATo</h1>
+      <img src="" class="logo" alt=""><h1>LegATo Tutorial</h1>
                         <h4 data-toc-skip class="author">Aubrey R.
 Odom</h4>
             <address class="author_afil">
@@ -82,7 +85,7 @@ Odom</h4>
 MA<br><a class="author_email" href="mailto:#"></a><a href="mailto:aodom@bu.edu" class="email">aodom@bu.edu</a>
       </address>
                   
-            <h4 data-toc-skip class="date">January 26, 2024</h4>
+            <h4 data-toc-skip class="date">January 28, 2024</h4>
       
       
       <div class="d-none name"><code>LegATo_vignette.Rmd</code></div>
@@ -91,239 +94,976 @@ MA<br><a class="author_email" href="mailto:#"></a><a href="mailto:aodom@bu.edu" 
     
     
 <div class="section level2">
-<h2 id="introduction-to-legato-longitudinal-metagenomic-analysis-toolkit">Introduction to LegATo: Longitudinal mEtaGenomic Analysis
-TOolkit<a class="anchor" aria-label="anchor" href="#introduction-to-legato-longitudinal-metagenomic-analysis-toolkit"></a>
+<h2 id="introduction-to-legato">Introduction to LegATo<a class="anchor" aria-label="anchor" href="#introduction-to-legato"></a>
 </h2>
 <div class="section level3">
 <h3 id="streamlining-longitudinal-microbiome-profiling-in-bioconductor">Streamlining longitudinal microbiome profiling in Bioconductor<a class="anchor" aria-label="anchor" href="#streamlining-longitudinal-microbiome-profiling-in-bioconductor"></a>
 </h3>
-<p>LegATo is a suite of open-source software tools for longitudinal
-microbiome analysis that is extendable to several different study forms
-with optimal ease-of-use for researchers. Microbiome time-series data
-presents distinct challenges including complex covariate dependencies
-and variety of longitudinal study designs. This toolkit will allow
-researchers to determine which microbial taxa are affected over time by
-perturbations such as onset of disease or lifestyle choices, and to
-predict the effects of these perturbations over time, including changes
-in composition or stability of commensal bacteria.</p>
-<p>LegATo integrates visualization, modeling and testing procedures. It
-will be supplemented by hierarchical clustering tools and multivariate
-generalized estimating equations (JGEEs) to adjust for the compositional
-nature of microbiome data.</p>
+<p>Microbiome time-series data presents several distinct challenges,
+including complex covariate dependencies and a variety of longitudinal
+study designs. Furthermore, while several individual tools have been
+created to aid in longitudinal microbiome data analysis, an
+all-inclusive R-based toolkit has remained elusive.</p>
+<p>To address these concerns, LegATo (Longitudinal mEtaGenomic Analysis
+TOolkit) has risen from the ashes. LegATo is a suite of open-source
+software tools for longitudinal microbiome analysis that is extendable
+to several different study forms, all while promising optimal
+ease-of-use for researchers. This toolkit will allow researchers to
+determine which microbial taxa are affected over time by perturbations
+such as onset of disease or lifestyle choices, and to predict the
+effects of these perturbations over time, including changes in
+composition or stability of commensal bacteria.</p>
+<p>Currently, LegATo entertains a number of data cleaning, aggregation,
+modeling and testing procedures. As we develop or learn of new methods,
+we will add to the toolkit accordingly. We will soon add hierarchical
+clustering tools and multivariate generalized estimating equations
+(JGEEs) to adjust for the compositional nature of microbiome data.</p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="setup">Setup<a class="anchor" aria-label="anchor" href="#setup"></a>
+<h2 id="getting-started-with-legato">Getting started with LegATo<a class="anchor" aria-label="anchor" href="#getting-started-with-legato"></a>
 </h2>
+<div class="section level3">
+<h3 id="compatibility-with-multiassayexperiment-and-summarizedexperiment-objects">Compatibility with <code>MultiAssayExperiment</code> and
+<code>SummarizedExperiment</code> objects<a class="anchor" aria-label="anchor" href="#compatibility-with-multiassayexperiment-and-summarizedexperiment-objects"></a>
+</h3>
+<p>The convenience of LegATo is in part credited to the integration of
+<code>MultiAssayExperiment</code> and <code>SummarizedExperiment</code>
+objects. These are reliable and clean data structures developed by the
+as part of the <em><a href="https://bioconductor.org/packages/3.17/MultiAssayExperiment" class="external-link">MultiAssayExperiment</a></em>
+and <em><a href="https://bioconductor.org/packages/3.17/SummarizedExperiment" class="external-link">SummarizedExperiment</a></em>
+packages.</p>
+<p>The <code>MultiAssayExperiment</code> container concisely stores a
+<code>SummarizedExperiment</code> object, which aggregates data matrices
+along with annotation information, metadata, and reduced dimensionality
+data (PCA, t-SNE, etc.). To learn more about proper usage and context of
+these objects, you may want to take a look at the <a href="https://bioconductor.org/packages/release/bioc/vignettes/MultiAssayExperiment/inst/doc/MultiAssayExperiment.html" class="external-link">MultiAssayExperiment
+package vignette</a> and <a href="https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html" class="external-link">SummarizedExperiment
+package vignette</a>.</p>
+<p>To install these two packages, run the following code:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"BiocManager"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span></span>
+<span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"SummarizedExperiment"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"BiocManager"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span></span>
+<span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"SummarizedExperiment"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="installation-and-setup">Installation and setup<a class="anchor" aria-label="anchor" href="#installation-and-setup"></a>
+</h3>
+<p>In order to install the development version of LegATo from Github,
+run the following code:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"devtools"</span>, quietly<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"wejlab/LegATo"</span><span class="op">)</span></span></code></pre></div>
+<p>Now we’ll load the LegATo package into our library:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">LegATo</span><span class="op">)</span></span></code></pre></div>
 </div>
+</div>
 <div class="section level2">
-<h2 id="data">Data<a class="anchor" aria-label="anchor" href="#data"></a>
+<h2 id="formatting-input-data-for-use-with-legato">Formatting input data for use with LegATo<a class="anchor" aria-label="anchor" href="#formatting-input-data-for-use-with-legato"></a>
 </h2>
-<p>We will be utilizing nasopharyngeal microbiome data from Zambian
-Infants from Odom et al.:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<p>LegATo functions expect data that is properly formatted in a
+<code>MultiAssayExperiment</code> container that is compatible with the
+<a href="https://wejlab.github.io/animalcules-docs/" class="external-link">animalcules
+package</a>. Obtaining properly formatted data can be achieved easily
+via the <code><a href="../reference/create_formatted_MAE.html">create_formatted_MAE()</a></code> function from the LegATo
+package, as detailed below.</p>
+<div class="section level3">
+<h3 id="a-note-on-compatibility-with-other-packages">A note on compatibility with other packages<a class="anchor" aria-label="anchor" href="#a-note-on-compatibility-with-other-packages"></a>
+</h3>
+<p>If you’ve analyzed your metagenomic or 16S data via the <a href="https://wejlab.github.io/metascope-docs/" class="external-link">MetaScope package</a>,
+you can aggregate your sample outputs with user-input metadata using the
+<code>convert_animalcules()</code> or
+<code>convert_animalcules_silva()</code> functions. These functions
+create a taxonomy table and collate all data into a LegATo- and
+animalcules-compatible <code>MultiAssayExperiment</code> object.</p>
+<p>You can also format your data analyzed elsewhere (like PathoScope
+2.0) with the <a href="https://wejlab.github.io/animalcules-docs/" class="external-link">animalcules
+package</a> in the upload step with the R Shiny app, and then select
+“Download Animalcules File” to obtain a <code>MAE</code> object that can
+be used with LegATo.</p>
+</div>
+<div class="section level3">
+<h3 id="requirements-for-using-create_formatted_mae">Requirements for using <code>create_formatted_MAE()</code><a class="anchor" aria-label="anchor" href="#requirements-for-using-create_formatted_mae"></a>
+</h3>
+<p>For the purposes of this example, we’ll look at some example inputs
+unrelated to the main HIV-E infant data:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"counts.csv"</span>, package <span class="op">=</span> <span class="st">"LegATo"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span>row.names <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html" class="external-link">rename_with</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html" class="external-link">str_replace</a></span><span class="op">(</span><span class="va">x</span>, <span class="st">"\\."</span>, <span class="st">"-"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">tax</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"tax.csv"</span>, package <span class="op">=</span> <span class="st">"LegATo"</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span>row.names <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="va">sample</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"sample.csv"</span>, package <span class="op">=</span> <span class="st">"LegATo"</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span>row.names <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
+<p>Now we’ll look at the formatting of each:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">ndim</span> <span class="op">&lt;-</span> <span class="fl">5</span></span>
+<span><span class="va">counts</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_len</a></span><span class="op">(</span><span class="va">ndim</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_len</a></span><span class="op">(</span><span class="va">ndim</span><span class="op">)</span><span class="op">]</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Counts Table Preview"</span>,</span>
+<span>               label <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
+<caption>Counts Table Preview</caption>
+<thead><tr class="header">
+<th align="left"></th>
+<th align="right">X-1</th>
+<th align="right">X-2</th>
+<th align="right">X-3</th>
+<th align="right">X-4</th>
+<th align="right">X-5</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">Acinetobacter_beijerinckii</td>
+<td align="right">430</td>
+<td align="right">18103</td>
+<td align="right">810</td>
+<td align="right">103</td>
+<td align="right">74</td>
+</tr>
+<tr class="even">
+<td align="left">Acinetobacter_bouvetii</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Acinetobacter_guillouiae</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">Acinetobacter_gyllenbergii</td>
+<td align="right">6</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">11</td>
+</tr>
+<tr class="odd">
+<td align="left">Acinetobacter_indicus</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">9</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">tax</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_len</a></span><span class="op">(</span><span class="va">ndim</span><span class="op">)</span>, <span class="op">]</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Taxonomy Table Preview"</span>,</span>
+<span>               label <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
+<caption>Taxonomy Table Preview</caption>
+<colgroup>
+<col width="18%">
+<col width="9%">
+<col width="10%">
+<col width="13%">
+<col width="9%">
+<col width="9%">
+<col width="9%">
+<col width="18%">
+</colgroup>
+<thead><tr class="header">
+<th align="left"></th>
+<th align="left">superkingdom</th>
+<th align="left">phylum</th>
+<th align="left">class</th>
+<th align="left">order</th>
+<th align="left">family</th>
+<th align="left">genus</th>
+<th align="left">species</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">Acinetobacter_beijerinckii</td>
+<td align="left">Bacteria</td>
+<td align="left">Proteobacteria</td>
+<td align="left">Gammaproteobacteria</td>
+<td align="left">Moraxellales</td>
+<td align="left">Moraxellaceae</td>
+<td align="left">Acinetobacter</td>
+<td align="left">Acinetobacter_beijerinckii</td>
+</tr>
+<tr class="even">
+<td align="left">Acinetobacter_bouvetii</td>
+<td align="left">Bacteria</td>
+<td align="left">Proteobacteria</td>
+<td align="left">Gammaproteobacteria</td>
+<td align="left">Moraxellales</td>
+<td align="left">Moraxellaceae</td>
+<td align="left">Acinetobacter</td>
+<td align="left">Acinetobacter_bouvetii</td>
+</tr>
+<tr class="odd">
+<td align="left">Acinetobacter_guillouiae</td>
+<td align="left">Bacteria</td>
+<td align="left">Proteobacteria</td>
+<td align="left">Gammaproteobacteria</td>
+<td align="left">Moraxellales</td>
+<td align="left">Moraxellaceae</td>
+<td align="left">Acinetobacter</td>
+<td align="left">Acinetobacter_guillouiae</td>
+</tr>
+<tr class="even">
+<td align="left">Acinetobacter_gyllenbergii</td>
+<td align="left">Bacteria</td>
+<td align="left">Proteobacteria</td>
+<td align="left">Gammaproteobacteria</td>
+<td align="left">Moraxellales</td>
+<td align="left">Moraxellaceae</td>
+<td align="left">Acinetobacter</td>
+<td align="left">Acinetobacter_gyllenbergii</td>
+</tr>
+<tr class="odd">
+<td align="left">Acinetobacter_indicus</td>
+<td align="left">Bacteria</td>
+<td align="left">Proteobacteria</td>
+<td align="left">Gammaproteobacteria</td>
+<td align="left">Moraxellales</td>
+<td align="left">Moraxellaceae</td>
+<td align="left">Acinetobacter</td>
+<td align="left">Acinetobacter_indicus</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">sample</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_len</a></span><span class="op">(</span><span class="va">ndim</span><span class="op">)</span>, <span class="op">]</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Sample Table Preview"</span>,</span>
+<span>               label <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
+<caption>Sample Table Preview</caption>
+<thead><tr class="header">
+<th align="left"></th>
+<th align="left">Sample</th>
+<th align="left">Subject</th>
+<th align="left">Sex</th>
+<th align="right">Month</th>
+<th align="left">Group</th>
+<th align="right">Pairing</th>
+<th align="right">HairLength</th>
+<th align="right">Age</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">X-1</td>
+<td align="left">X-1</td>
+<td align="left">S1</td>
+<td align="left">Male</td>
+<td align="right">1</td>
+<td align="left">A</td>
+<td align="right">1</td>
+<td align="right">48.62753</td>
+<td align="right">21.9</td>
+</tr>
+<tr class="even">
+<td align="left">X-2</td>
+<td align="left">X-2</td>
+<td align="left">S2</td>
+<td align="left">Male</td>
+<td align="right">1</td>
+<td align="left">B</td>
+<td align="right">1</td>
+<td align="right">53.53195</td>
+<td align="right">67.7</td>
+</tr>
+<tr class="odd">
+<td align="left">X-3</td>
+<td align="left">X-3</td>
+<td align="left">S3</td>
+<td align="left">Female</td>
+<td align="right">1</td>
+<td align="left">A</td>
+<td align="right">2</td>
+<td align="right">47.61090</td>
+<td align="right">78.9</td>
+</tr>
+<tr class="even">
+<td align="left">X-4</td>
+<td align="left">X-4</td>
+<td align="left">S4</td>
+<td align="left">Female</td>
+<td align="right">1</td>
+<td align="left">B</td>
+<td align="right">2</td>
+<td align="right">49.72870</td>
+<td align="right">48.6</td>
+</tr>
+<tr class="odd">
+<td align="left">X-5</td>
+<td align="left">X-5</td>
+<td align="left">S5</td>
+<td align="left">Female</td>
+<td align="right">1</td>
+<td align="left">A</td>
+<td align="right">3</td>
+<td align="right">59.04509</td>
+<td align="right">48.4</td>
+</tr>
+</tbody>
+</table>
+<p>You should note the following:</p>
+<ul>
+<li>The <code>counts</code> table is composed of raw microbial counts.
+There is one row for each taxon, and one column for each sample.</li>
+<li>The <code>tax</code> table is composed of taxonomy lineages. There
+is one row for each taxon, and any number of columns each taxonomic
+level (e.g., superkingdom, genus, species). The lowest level of taxonomy
+serves as the rownames for the table, and is also stored in its own
+column. Taxonomic levels increase in granularity from left to
+right.</li>
+<li>The <code>sample</code> table contains entries for each sample, with
+unique sample IDs on the rows. The columns are metadata for the samples,
+such as subjects or units on which repeated measures were taken,
+groupings, pairings, and covariates.</li>
+<li><code>rownames(counts) == rownames(tax)</code></li>
+<li><code>colnames(counts) == colnames(sample)</code></li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="use-create_formatted_mae">Use <code>create_formatted_MAE()</code><a class="anchor" aria-label="anchor" href="#use-create_formatted_mae"></a>
+</h3>
+<p>So once your data are formatted correctly, you can pretty easily use
+<code><a href="../reference/create_formatted_MAE.html">create_formatted_MAE()</a></code> like so:</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">output</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/create_formatted_MAE.html">create_formatted_MAE</a></span><span class="op">(</span>counts_dat <span class="op">=</span> <span class="va">counts</span>,</span>
+<span>                               tax_dat <span class="op">=</span> <span class="va">tax</span>,</span>
+<span>                               metadata_dat <span class="op">=</span> <span class="va">sample</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/class.html" class="external-link">class</a></span><span class="op">(</span><span class="va">output</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## [1] "MultiAssayExperiment"</span></span>
+<span><span class="co">## attr(,"package")</span></span>
+<span><span class="co">## [1] "MultiAssayExperiment"</span></span></code></pre>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">MultiAssayExperiment</span><span class="fu">::</span><span class="fu">assays</span><span class="op">(</span><span class="va">output</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## List of length 1</span></span>
+<span><span class="co">## names(1): MicrobeGenetics</span></span></code></pre>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">SummarizedExperiment</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html" class="external-link">assays</a></span><span class="op">(</span><span class="va">output</span><span class="op">[[</span><span class="st">"MicrobeGenetics"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## List of length 1</span></span>
+<span><span class="co">## names(1): MGX</span></span></code></pre>
+</div>
+<div class="section level3">
+<h3 id="adding-information-to-your-metadata-later-in-your-analysis">Adding information to your metadata later in your analysis<a class="anchor" aria-label="anchor" href="#adding-information-to-your-metadata-later-in-your-analysis"></a>
+</h3>
+<p>If information needs to be added to your data object at some point in
+the analysis, it is easiest to manipulate the raw data objects
+(potentially via <code><a href="../reference/parse_MAE_SE.html">parse_MAE_SE()</a></code>) and then recreate the
+<code>MAE</code> object with <code><a href="../reference/create_formatted_MAE.html">create_formatted_MAE()</a></code>.</p>
+</div>
+</div>
+<div class="section level2">
+<h2 id="example-data">Example data<a class="anchor" aria-label="anchor" href="#example-data"></a>
+</h2>
+<p>To illustrate the capabilities of LegATo, we will turn to a published
+dataset from the following paper:</p>
+<p>Odom-Mabey AR, Gill CJ, Pieciak R et al. Characterization of
+longitudinal nasopharyngeal microbiome patterns in maternally
+HIV-exposed Zambian infants [version 1; peer review: 1 approved with
+reservations]. Gates Open Res 2022, 6:143 (<a href="https://doi.org/10.12688/gatesopenres.14041.1" class="external-link uri">https://doi.org/10.12688/gatesopenres.14041.1</a>)</p>
+<p>The raw dataset is archived in Zenodo:</p>
+<p>Zenodo: Underlying data for ‘Characterization of longitudinal
+nasopharyngeal microbiome patterns in maternally HIV-exposed Zambian
+infants’. <a href="https://doi.org/10.5281/zenodo.725531324" class="external-link uri">https://doi.org/10.5281/zenodo.725531324</a></p>
+<p>Further details on how the dataset was altered for inclusion in this
+package are provided <a href="https://github.com/wejlab/LegATo/blob/main/inst/script/extdata_explanations.Rmd" class="external-link">here</a>.</p>
+<div class="section level4">
+<h4 id="example-data-context-and-structure">Example data context and structure<a class="anchor" aria-label="anchor" href="#example-data-context-and-structure"></a>
+</h4>
+<p>The example data consists of 167 NP swabs of healthy HIV-exposed,
+uninfected (HEU; n=10) infants and their HIV(+) mothers and
+HIV-unexposed, uninfected (HUU; n=10) infants and their HIV(-) mothers.
+A total of 7 samples were collected per infant, with some missingness in
+the data. These swabs were identified from a sample library collected in
+Lusaka, Zambia between 2015 and 2016.</p>
+<p>The analysis objective is to parse the association between the NP
+resident bacteria and infant HIV exposure during the first 3.5 months
+(14 weeks) of life, a critical time in microbiome maturation.</p>
+<p>All data was processed with <code>PathoScope 2.0</code>, and the
+sample outputs were aggregated with the <code>animalcules</code> R
+package.</p>
+<p>For this analysis, we will work with the infant data only and subset
+the data accordingly.</p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"MAE.RDS"</span>, package <span class="op">=</span> <span class="st">"LegATo"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html" class="external-link">readRDS</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">dat_0.05</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/filter_animalcules_MAE.html">filter_animalcules_MAE</a></span><span class="op">(</span><span class="va">dat</span>, <span class="fl">0.05</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">parsed</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/parse_MAE_SE.html">parse_MAE_SE</a></span><span class="op">(</span><span class="va">dat</span>, which_assay <span class="op">=</span> <span class="st">"MicrobeGenetics"</span>, type <span class="op">=</span> <span class="st">"MAE"</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">alluvial_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_long_data.html">get_long_data</a></span><span class="op">(</span><span class="va">dat_0.05</span>, <span class="st">"genus"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">dat_subsetted</span> <span class="op">&lt;-</span> <span class="fu">MultiAssayExperiment</span><span class="fu">::</span><span class="fu"><a href="http://waldronlab.io/MultiAssayExperiment/reference/subsetBy.html" class="external-link">subsetByColData</a></span><span class="op">(</span><span class="va">dat</span>,</span>
+<span>                                                       <span class="va">dat</span><span class="op">$</span><span class="va">MothChild</span> <span class="op">==</span> <span class="st">"Infant"</span><span class="op">)</span></span></code></pre></div>
+<p>This leaves us with 129 samples in our analysis.</p>
+</div>
+</div>
+<div class="section level2">
+<h2 id="initial-data-exploration">Initial data exploration<a class="anchor" aria-label="anchor" href="#initial-data-exploration"></a>
+</h2>
+<div class="section level3">
+<h3 id="mae-manipulation">MAE manipulation<a class="anchor" aria-label="anchor" href="#mae-manipulation"></a>
+</h3>
+<p><code>LegATo</code> has several functions for manipulating
+<code>MAE</code> objects, delineated below:</p>
+<div class="section level4">
+<h4 id="clean-up-animalcules-formatted-maes">Clean up animalcules-formatted MAEs<a class="anchor" aria-label="anchor" href="#clean-up-animalcules-formatted-maes"></a>
+</h4>
+<p>If your data were aggregated via the <code>animalcules</code>
+package, as was done for the example data, the samples were aggregated
+at the strain taxonomic level and have residual taxonomy IDs present.
+The <code><a href="../reference/clean_animalcules_MAE.html">clean_animalcules_MAE()</a></code> function cleans up data
+suffering from these issues.</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">dat_cleaned</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/clean_animalcules_MAE.html">clean_animalcules_MAE</a></span><span class="op">(</span><span class="va">dat_subsetted</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## Registered S3 method overwritten by 'httr':</span></span>
 <span><span class="co">##   method         from  </span></span>
 <span><span class="co">##   print.response rmutil</span></span></code></pre>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">group_vars</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"HIVStatus"</span>, <span class="st">"MothChild"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="../reference/get_summary_table.html">get_summary_table</a></span><span class="op">(</span><span class="va">dat_0.05</span>, <span class="va">group_vars</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">##   HIVStatus MothChild mean_reads  sd_reads min_reads max_reads num_total</span></span>
-<span><span class="co">## 1   Control    Infant  156209.16 408000.52     24176   3016276        68</span></span>
-<span><span class="co">## 2   Control    Mother   68648.79  50526.74     14339    168157        19</span></span>
-<span><span class="co">## 3       HIV    Infant   90008.20  51395.08     13218    202079        61</span></span>
-<span><span class="co">## 4       HIV    Mother   72277.53  48180.28     20118    208029        19</span></span></code></pre>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">best_genus</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_top_taxa.html">get_top_taxa</a></span><span class="op">(</span><span class="va">dat_0.05</span>, <span class="st">"genus"</span><span class="op">)</span></span>
-<span><span class="va">best_species</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_top_taxa.html">get_top_taxa</a></span><span class="op">(</span><span class="va">dat_0.05</span>, <span class="st">"species"</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">this_palette</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/grDevices/palettes.html" class="external-link">rainbow</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span></span>
+</div>
+<div class="section level4">
+<h4 id="filter-mae">Filter MAE<a class="anchor" aria-label="anchor" href="#filter-mae"></a>
+</h4>
+<p>Many metagenomic pipelines identify taxon abundances at extremely
+small levels, which can be noisy to deal with in an analysis. The
+<code>filter_animalcules_MAE</code> function smoothly transforms reads
+belonging to taxa with an overall genera threshold under the
+<code>filter_prop</code> (filter proportion) argument, which we will set
+as 0.005.</p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">dat_filt</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/filter_animalcules_MAE.html">filter_animalcules_MAE</a></span><span class="op">(</span><span class="va">dat_cleaned</span>, <span class="fl">0.005</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="parse-mae-to-extract-data">Parse MAE to extract data<a class="anchor" aria-label="anchor" href="#parse-mae-to-extract-data"></a>
+</h4>
+<p>If you want to take a closer look at your data, you can easily
+extract it into the counts, taxonomy, and sample metadata tables using
+the <code><a href="../reference/parse_MAE_SE.html">parse_MAE_SE()</a></code> function.</p>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">parsed</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/parse_MAE_SE.html">parse_MAE_SE</a></span><span class="op">(</span><span class="va">dat_filt</span>, which_assay <span class="op">=</span> <span class="st">"MicrobeGenetics"</span>, type <span class="op">=</span> <span class="st">"MAE"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="../reference/plot_stacked_area.html">plot_stacked_area</a></span><span class="op">(</span><span class="va">dat_0.05</span>, <span class="st">"genus"</span>, </span>
-<span>                         <span class="st">"HIVStatus"</span>,</span>
-<span>                         <span class="st">"timepoint"</span>,</span>
-<span>                         palette_input <span class="op">=</span> <span class="va">this_palette</span><span class="op">)</span></span></code></pre></div>
-<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-6-1.png" width="700"></p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_stacked_bar.html">plot_stacked_bar</a></span><span class="op">(</span><span class="va">dat_0.05</span>, <span class="st">"genus"</span>, </span>
-<span>             <span class="st">"HIVStatus"</span>,</span>
-<span>             <span class="st">"timepoint"</span>,</span>
-<span>             palette_input <span class="op">=</span> <span class="va">this_palette</span><span class="op">)</span></span></code></pre></div>
-<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-7-1.png" width="700"></p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_alluvial.html">plot_alluvial</a></span><span class="op">(</span>dat <span class="op">=</span> <span class="va">dat_0.05</span>, </span>
+<span><span class="va">parsed</span><span class="op">$</span><span class="va">counts</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_len</a></span><span class="op">(</span><span class="fl">5</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_len</a></span><span class="op">(</span><span class="fl">5</span><span class="op">)</span><span class="op">]</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Counts Table"</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
+<caption>Counts Table</caption>
+<thead><tr class="header">
+<th align="left"></th>
+<th align="right">X1755</th>
+<th align="right">X2216</th>
+<th align="right">X2431</th>
+<th align="right">X2561</th>
+<th align="right">X2699</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">Acinetobacter beijerinckii</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">Acinetobacter bouvetii</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Acinetobacter guillouiae</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">Acinetobacter gyllenbergii</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Acinetobacter indicus</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">parsed</span><span class="op">$</span><span class="va">sam</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_len</a></span><span class="op">(</span><span class="fl">5</span><span class="op">)</span>, <span class="op">]</span>  <span class="op">|&gt;</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Sample Metadata"</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
+<caption>Sample Metadata</caption>
+<thead><tr class="header">
+<th align="left"></th>
+<th align="left">Sample</th>
+<th align="left">Subject</th>
+<th align="left">HIVStatus</th>
+<th align="left">MothChild</th>
+<th align="right">timepoint</th>
+<th align="right">Age</th>
+<th align="right">pairing</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">X1755</td>
+<td align="left">X1755</td>
+<td align="left">0469-1</td>
+<td align="left">Control</td>
+<td align="left">Infant</td>
+<td align="right">0</td>
+<td align="right">7</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left">X2216</td>
+<td align="left">X2216</td>
+<td align="left">0507-1</td>
+<td align="left">Control</td>
+<td align="left">Infant</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td align="left">X2431</td>
+<td align="left">X2431</td>
+<td align="left">0539-1</td>
+<td align="left">Control</td>
+<td align="left">Infant</td>
+<td align="right">0</td>
+<td align="right">9</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="left">X2561</td>
+<td align="left">X2561</td>
+<td align="left">0554-1</td>
+<td align="left">HIV</td>
+<td align="left">Infant</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left">X2699</td>
+<td align="left">X2699</td>
+<td align="left">0620-1</td>
+<td align="left">HIV</td>
+<td align="left">Infant</td>
+<td align="right">0</td>
+<td align="right">4</td>
+<td align="right">2</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">parsed</span><span class="op">$</span><span class="va">tax</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_len</a></span><span class="op">(</span><span class="fl">5</span><span class="op">)</span>, <span class="op">]</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Taxonomy Table"</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
+<caption>Taxonomy Table</caption>
+<colgroup>
+<col width="18%">
+<col width="9%">
+<col width="10%">
+<col width="13%">
+<col width="9%">
+<col width="9%">
+<col width="9%">
+<col width="18%">
+</colgroup>
+<thead><tr class="header">
+<th align="left"></th>
+<th align="left">superkingdom</th>
+<th align="left">phylum</th>
+<th align="left">class</th>
+<th align="left">order</th>
+<th align="left">family</th>
+<th align="left">genus</th>
+<th align="left">species</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">Acinetobacter beijerinckii</td>
+<td align="left">Bacteria</td>
+<td align="left">Proteobacteria</td>
+<td align="left">Gammaproteobacteria</td>
+<td align="left">Moraxellales</td>
+<td align="left">Moraxellaceae</td>
+<td align="left">Acinetobacter</td>
+<td align="left">Acinetobacter beijerinckii</td>
+</tr>
+<tr class="even">
+<td align="left">Acinetobacter bouvetii</td>
+<td align="left">Bacteria</td>
+<td align="left">Proteobacteria</td>
+<td align="left">Gammaproteobacteria</td>
+<td align="left">Moraxellales</td>
+<td align="left">Moraxellaceae</td>
+<td align="left">Acinetobacter</td>
+<td align="left">Acinetobacter bouvetii</td>
+</tr>
+<tr class="odd">
+<td align="left">Acinetobacter guillouiae</td>
+<td align="left">Bacteria</td>
+<td align="left">Proteobacteria</td>
+<td align="left">Gammaproteobacteria</td>
+<td align="left">Moraxellales</td>
+<td align="left">Moraxellaceae</td>
+<td align="left">Acinetobacter</td>
+<td align="left">Acinetobacter guillouiae</td>
+</tr>
+<tr class="even">
+<td align="left">Acinetobacter gyllenbergii</td>
+<td align="left">Bacteria</td>
+<td align="left">Proteobacteria</td>
+<td align="left">Gammaproteobacteria</td>
+<td align="left">Moraxellales</td>
+<td align="left">Moraxellaceae</td>
+<td align="left">Acinetobacter</td>
+<td align="left">Acinetobacter gyllenbergii</td>
+</tr>
+<tr class="odd">
+<td align="left">Acinetobacter indicus</td>
+<td align="left">Bacteria</td>
+<td align="left">Proteobacteria</td>
+<td align="left">Gammaproteobacteria</td>
+<td align="left">Moraxellales</td>
+<td align="left">Moraxellaceae</td>
+<td align="left">Acinetobacter</td>
+<td align="left">Acinetobacter indicus</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section level3">
+<h3 id="summarizing-microbial-counts-data">Summarizing microbial counts data<a class="anchor" aria-label="anchor" href="#summarizing-microbial-counts-data"></a>
+</h3>
+<p>It is fairly convenient to summarize the average number of reads for
+a report with <code><a href="../reference/get_summary_table.html">get_summary_table()</a></code>. The table groups by
+user-provided discrete covariates.</p>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">group_vars</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"HIVStatus"</span>, <span class="st">"MothChild"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/get_summary_table.html">get_summary_table</a></span><span class="op">(</span><span class="va">dat_filt</span>, <span class="va">group_vars</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Summary Table"</span>, label <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
+<caption>Summary Table</caption>
+<colgroup>
+<col width="14%">
+<col width="14%">
+<col width="15%">
+<col width="14%">
+<col width="14%">
+<col width="14%">
+<col width="14%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">HIVStatus</th>
+<th align="left">MothChild</th>
+<th align="right">mean_reads</th>
+<th align="right">sd_reads</th>
+<th align="right">min_reads</th>
+<th align="right">max_reads</th>
+<th align="right">num_total</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">Control</td>
+<td align="left">Infant</td>
+<td align="right">156209.2</td>
+<td align="right">408000.52</td>
+<td align="right">24176</td>
+<td align="right">3016276</td>
+<td align="right">68</td>
+</tr>
+<tr class="even">
+<td align="left">HIV</td>
+<td align="left">Infant</td>
+<td align="right">90008.2</td>
+<td align="right">51395.08</td>
+<td align="right">13218</td>
+<td align="right">202079</td>
+<td align="right">61</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>get_top_taxa</code> function outputs a
+<code>data.frame</code> that lists taxa in order of relative
+abundance.</p>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">best_genus</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_top_taxa.html">get_top_taxa</a></span><span class="op">(</span><span class="va">dat_filt</span>, <span class="st">"genus"</span><span class="op">)</span></span>
+<span><span class="va">best_genus</span> <span class="op">|&gt;</span> <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"Table of genera, ranked by abundance"</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
+<caption>Table of genera, ranked by abundance</caption>
+<thead><tr class="header">
+<th align="left">taxon</th>
+<th align="right">allmeans</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">Dolosigranulum</td>
+<td align="right">0.1892754</td>
+</tr>
+<tr class="even">
+<td align="left">Streptococcus</td>
+<td align="right">0.1730879</td>
+</tr>
+<tr class="odd">
+<td align="left">Moraxella</td>
+<td align="right">0.1713469</td>
+</tr>
+<tr class="even">
+<td align="left">Staphylococcus</td>
+<td align="right">0.1554891</td>
+</tr>
+<tr class="odd">
+<td align="left">Corynebacterium</td>
+<td align="right">0.1290279</td>
+</tr>
+<tr class="even">
+<td align="left">Haemophilus</td>
+<td align="right">0.0837949</td>
+</tr>
+<tr class="odd">
+<td align="left">Other</td>
+<td align="right">0.0461049</td>
+</tr>
+<tr class="even">
+<td align="left">Anaerobacillus</td>
+<td align="right">0.0145366</td>
+</tr>
+<tr class="odd">
+<td align="left">Pseudomonas</td>
+<td align="right">0.0121401</td>
+</tr>
+<tr class="even">
+<td align="left">Paracoccus</td>
+<td align="right">0.0106820</td>
+</tr>
+<tr class="odd">
+<td align="left">Acinetobacter</td>
+<td align="right">0.0093201</td>
+</tr>
+<tr class="even">
+<td align="left">Alkalihalophilus</td>
+<td align="right">0.0051942</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section level3">
+<h3 id="visualizing-data">Visualizing Data<a class="anchor" aria-label="anchor" href="#visualizing-data"></a>
+</h3>
+<p>There are several plots by which we can visualize changes in relative
+abundance over time, accounting for a given covariate. In this case, we
+are interested in HIV exposure.</p>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">this_palette</span> <span class="op">&lt;-</span> <span class="fu">paletteer</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/paletteer/man/palettes_d.html" class="external-link">palettes_d</a></span><span class="op">$</span><span class="va">ggsci</span><span class="op">$</span><span class="va">springfield_simpsons</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">magrittr</span><span class="fu">::</span><span class="fu"><a href="https://magrittr.tidyverse.org/reference/aliases.html" class="external-link">extract</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_len</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">best_genus</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="other-data-manipulation-functions">Other data manipulation functions<a class="anchor" aria-label="anchor" href="#other-data-manipulation-functions"></a>
+</h3>
+<div class="section level4">
+<h4 id="alluvial-plot">Alluvial plot<a class="anchor" aria-label="anchor" href="#alluvial-plot"></a>
+</h4>
+<p>Alluvial diagrams illustrate individual taxa as stream fields that
+change position at different time points. The height of a stream field
+represents the relative abundance of that taxon. At a given time point,
+stream fields are ranked from the highest to lowest abundance (top to
+bottom). These can be constructed with <code><a href="../reference/plot_alluvial.html">plot_alluvial()</a></code>.</p>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_alluvial.html">plot_alluvial</a></span><span class="op">(</span>dat <span class="op">=</span> <span class="va">dat_filt</span>, </span>
 <span>              taxon_level <span class="op">=</span> <span class="st">"genus"</span>, </span>
 <span>              covariate_1 <span class="op">=</span> <span class="st">"HIVStatus"</span>,</span>
 <span>              covariate_time <span class="op">=</span> <span class="st">"timepoint"</span>,</span>
 <span>              palette_input <span class="op">=</span> <span class="va">this_palette</span>,</span>
 <span>              subtitle <span class="op">=</span> <span class="st">"Alluvial plot"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-8-1.png" width="700"></p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_spaghetti.html">plot_spaghetti</a></span><span class="op">(</span>dat <span class="op">=</span> <span class="va">dat_0.05</span>,</span>
+<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-12-1.png" width="700"></p>
+</div>
+<div class="section level4">
+<h4 class="tabset" id="spaghetti-plot">Spaghetti plot<a class="anchor" aria-label="anchor" href="#spaghetti-plot"></a>
+</h4>
+<p>We can create spaghetti or volatility plots to elucidate changes over
+time on a sample level for a given taxon. This is advantageous as other
+visualization methods are often aggregates of multiple samples and lack
+granularity. These plots can be created with
+<code><a href="../reference/plot_spaghetti.html">plot_spaghetti()</a></code>.</p>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">for</span> <span class="op">(</span><span class="va">this_genus</span> <span class="kw">in</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">parsed</span><span class="op">$</span><span class="va">tax</span><span class="op">$</span><span class="va">genus</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="st">"####"</span>, <span class="va">this_genus</span>, <span class="st">"\n"</span><span class="op">)</span></span>
+<span>  <span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/plot_spaghetti.html">plot_spaghetti</a></span><span class="op">(</span>dat <span class="op">=</span> <span class="va">dat_filt</span>,</span>
 <span>               covariate_time <span class="op">=</span> <span class="st">"timepoint"</span>,</span>
 <span>               covariate_1 <span class="op">=</span> <span class="st">"HIVStatus"</span>,</span>
 <span>               unit_var <span class="op">=</span> <span class="st">"Subject"</span>,</span>
 <span>               taxon_level <span class="op">=</span> <span class="st">"genus"</span>,</span>
-<span>               which_taxon <span class="op">=</span> <span class="st">"Corynebacterium"</span>,</span>
+<span>               which_taxon <span class="op">=</span> <span class="va">this_genus</span>,</span>
 <span>               palette_input<span class="op">=</span> <span class="va">this_palette</span>,</span>
 <span>               title <span class="op">=</span> <span class="st">"Spaghetti Plot"</span>,</span>
 <span>               subtitle <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">xlab</a></span><span class="op">(</span><span class="st">"Infant Age (Days)"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ylab</a></span><span class="op">(</span><span class="st">"Relative Abundance (log CPM)"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-9-1.png" width="700"></p>
-<div class="section level3">
-<h3 id="gee-modeling">GEE Modeling<a class="anchor" aria-label="anchor" href="#gee-modeling"></a>
-</h3>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">output</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/run_gee_model.html">run_gee_model</a></span><span class="op">(</span><span class="va">dat_0.05</span>, unit_var <span class="op">=</span> <span class="st">"Subject"</span>,</span>
-<span>                        fixed_cov <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"HIVStatus"</span>, <span class="st">"MothChild"</span>, <span class="st">"Age"</span><span class="op">)</span>,</span>
-<span>                        corstr <span class="op">=</span> <span class="st">"ar1"</span>,</span>
-<span>                        plot_out <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>                        plotsave_loc <span class="op">=</span> <span class="st">"."</span>,</span>
-<span>                        plot_terms <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">output</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">##   Coefficient Coefficient Estimate Standard Error Statistic Unadj p-value</span></span>
-<span><span class="co">## 1 (Intercept)            19688.134       6302.758 9.7577095   0.001785723</span></span>
-<span><span class="co">## 2 (Intercept)            47024.480      39794.316 1.3963874   0.237329377</span></span>
-<span><span class="co">## 3 (Intercept)             1649.273       3237.640 0.2594945   0.610467669</span></span>
-<span><span class="co">## 4 (Intercept)            61227.493      25929.320 5.5758453   0.018209873</span></span>
-<span><span class="co">## 5 (Intercept)            40215.335      20011.355 4.0385959   0.044470807</span></span>
-<span><span class="co">## 6 (Intercept)             5061.091       1762.443 8.2462798   0.004083561</span></span>
-<span><span class="co">##   Lower 95% CI Upper 95% CI           Taxon Adj p-value</span></span>
-<span><span class="co">## 1    7334.9559    32041.313      Paracoccus  0.02142867</span></span>
-<span><span class="co">## 2  -30970.9456   125019.905  Dolosigranulum  0.28479525</span></span>
-<span><span class="co">## 3   -4696.3844     7994.931   Streptococcus  0.64669047</span></span>
-<span><span class="co">## 4   10406.9605   112048.026  Staphylococcus  0.05640766</span></span>
-<span><span class="co">## 5     993.8005    79436.869 Corynebacterium  0.10472664</span></span>
-<span><span class="co">## 6    1606.7658     8515.415           Other  0.02450136</span></span></code></pre>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Trying out plotting</span></span>
-<span><span class="fu"><a href="../reference/run_gee_model.html">run_gee_model</a></span><span class="op">(</span><span class="va">dat_0.05</span>, unit_var <span class="op">=</span> <span class="st">"Subject"</span>,</span>
-<span>              taxon_level <span class="op">=</span> <span class="st">"genus"</span>,</span>
-<span>              fixed_cov <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"MothChild"</span>, <span class="st">"HIVStatus"</span>, <span class="st">"Age"</span><span class="op">)</span>,</span>
-<span>              corstr <span class="op">=</span> <span class="st">"ar1"</span>,</span>
-<span>              plot_out <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>              plotsave_loc <span class="op">=</span> <span class="st">"/restricted/projectnb/infant-microbiome/work/aodom"</span>,</span>
-<span>              plot_terms <span class="op">=</span> <span class="st">"MothChild"</span>,</span>
-<span>              width <span class="op">=</span> <span class="fl">6</span>, height <span class="op">=</span> <span class="fl">4</span>, units <span class="op">=</span> <span class="st">"in"</span>, scale <span class="op">=</span> <span class="fl">0.7</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">##        Coefficient Coefficient Estimate Standard Error    Statistic</span></span>
-<span><span class="co">## 1      (Intercept)         1.968813e+04   6.302758e+03 9.757710e+00</span></span>
-<span><span class="co">## 2      (Intercept)         4.702448e+04   3.979432e+04 1.396387e+00</span></span>
-<span><span class="co">## 3      (Intercept)         1.649273e+03   3.237640e+03 2.594945e-01</span></span>
-<span><span class="co">## 4      (Intercept)         6.122749e+04   2.592932e+04 5.575845e+00</span></span>
-<span><span class="co">## 5      (Intercept)         4.021533e+04   2.001135e+04 4.038596e+00</span></span>
-<span><span class="co">## 6      (Intercept)         5.061091e+03   1.762443e+03 8.246280e+00</span></span>
-<span><span class="co">## 7      (Intercept)        -7.011732e+02   1.529728e+03 2.100982e-01</span></span>
-<span><span class="co">## 8      (Intercept)         5.014573e+02   2.760020e+02 3.300985e+00</span></span>
-<span><span class="co">## 9      (Intercept)         1.871530e+03   9.646392e+02 3.764123e+00</span></span>
-<span><span class="co">## 10     (Intercept)         3.658252e+03   3.006672e+03 1.480386e+00</span></span>
-<span><span class="co">## 11     (Intercept)         2.959834e+02   1.259813e+02 5.519786e+00</span></span>
-<span><span class="co">## 12     (Intercept)         5.203975e+02   3.693658e+02 1.984984e+00</span></span>
-<span><span class="co">## 13             Age         2.655674e+01   7.763571e+01 1.170109e-01</span></span>
-<span><span class="co">## 14             Age        -7.787051e+00   1.913911e+02 1.655398e-03</span></span>
-<span><span class="co">## 15             Age         1.929738e+02   4.584825e+01 1.771540e+01</span></span>
-<span><span class="co">## 16             Age        -6.079942e+02   2.196734e+02 7.660267e+00</span></span>
-<span><span class="co">## 17             Age        -2.590372e+02   1.661664e+02 2.430177e+00</span></span>
-<span><span class="co">## 18             Age        -2.346838e+01   2.343107e+01 1.003187e+00</span></span>
-<span><span class="co">## 19             Age         1.421445e+02   3.861311e+01 1.355160e+01</span></span>
-<span><span class="co">## 20             Age         8.214144e-01   2.522884e+00 1.060059e-01</span></span>
-<span><span class="co">## 21             Age        -5.490882e+00   9.270816e+00 3.507908e-01</span></span>
-<span><span class="co">## 22             Age        -5.856951e+01   4.881361e+01 1.439664e+00</span></span>
-<span><span class="co">## 23             Age         1.538404e+00   2.175117e+00 5.002363e-01</span></span>
-<span><span class="co">## 24             Age         7.461006e-01   3.586369e+00 4.327977e-02</span></span>
-<span><span class="co">## 25    HIVStatusHIV         7.228454e+02   5.200387e+03 1.932055e-02</span></span>
-<span><span class="co">## 26    HIVStatusHIV        -3.159071e+04   2.628864e+04 1.444052e+00</span></span>
-<span><span class="co">## 27    HIVStatusHIV         5.932463e+03   4.843201e+03 1.500393e+00</span></span>
-<span><span class="co">## 28    HIVStatusHIV        -1.096237e+04   1.252348e+04 7.662288e-01</span></span>
-<span><span class="co">## 29    HIVStatusHIV        -1.582424e+04   1.041180e+04 2.309906e+00</span></span>
-<span><span class="co">## 30    HIVStatusHIV         2.062332e+02   1.691575e+03 1.486396e-02</span></span>
-<span><span class="co">## 31    HIVStatusHIV         3.974993e+02   3.103528e+03 1.640444e-02</span></span>
-<span><span class="co">## 32    HIVStatusHIV        -3.401443e+02   5.461223e+02 3.879239e-01</span></span>
-<span><span class="co">## 33    HIVStatusHIV        -1.193087e+03   7.554959e+02 2.493906e+00</span></span>
-<span><span class="co">## 34    HIVStatusHIV         2.173039e+03   1.800209e+03 1.457099e+00</span></span>
-<span><span class="co">## 35    HIVStatusHIV        -2.052954e+00   3.533814e+02 3.374978e-05</span></span>
-<span><span class="co">## 36    HIVStatusHIV        -7.298865e+01   3.210760e+02 5.167672e-02</span></span>
-<span><span class="co">## 37 MothChildMother        -2.684380e+05   7.718724e+05 1.209475e-01</span></span>
-<span><span class="co">## 38 MothChildMother         5.544548e+04   1.887806e+06 8.626163e-04</span></span>
-<span><span class="co">## 39 MothChildMother        -1.920733e+06   4.576561e+05 1.761389e+01</span></span>
-<span><span class="co">## 40 MothChildMother         6.030711e+06   2.176539e+06 7.677225e+00</span></span>
-<span><span class="co">## 41 MothChildMother         2.565470e+06   1.646840e+06 2.426783e+00</span></span>
-<span><span class="co">## 42 MothChildMother         2.393347e+05   2.328444e+05 1.056525e+00</span></span>
-<span><span class="co">## 43 MothChildMother        -1.417849e+06   3.856772e+05 1.351487e+01</span></span>
-<span><span class="co">## 44 MothChildMother        -6.749208e+03   2.534460e+04 7.091443e-02</span></span>
-<span><span class="co">## 45 MothChildMother         5.539159e+04   9.220013e+04 3.609313e-01</span></span>
-<span><span class="co">## 46 MothChildMother         5.810005e+05   4.842269e+05 1.439644e+00</span></span>
-<span><span class="co">## 47 MothChildMother        -1.486818e+04   2.183899e+04 4.635005e-01</span></span>
-<span><span class="co">## 48 MothChildMother        -7.730927e+03   3.569743e+04 4.690178e-02</span></span>
-<span><span class="co">##    Unadj p-value  Lower 95% CI  Upper 95% CI            Taxon Adj p-value</span></span>
-<span><span class="co">## 1   1.785723e-03  7.334956e+03  3.204131e+04       Paracoccus 0.021428671</span></span>
-<span><span class="co">## 2   2.373294e-01 -3.097095e+04  1.250199e+05   Dolosigranulum 0.284795253</span></span>
-<span><span class="co">## 3   6.104677e-01 -4.696384e+03  7.994931e+03    Streptococcus 0.646690469</span></span>
-<span><span class="co">## 4   1.820987e-02  1.040696e+04  1.120480e+05   Staphylococcus 0.056407664</span></span>
-<span><span class="co">## 5   4.447081e-02  9.938005e+02  7.943687e+04  Corynebacterium 0.104726641</span></span>
-<span><span class="co">## 6   4.083561e-03  1.606766e+03  8.515415e+03            Other 0.024501364</span></span>
-<span><span class="co">## 7   6.466905e-01 -3.699385e+03  2.297038e+03      Haemophilus 0.646690469</span></span>
-<span><span class="co">## 8   6.923834e-02 -3.949660e+01  1.042411e+03 Alkalihalophilus 0.118694299</span></span>
-<span><span class="co">## 9   5.236332e-02 -1.912810e+01  3.762188e+03    Acinetobacter 0.104726641</span></span>
-<span><span class="co">## 10  2.237141e-01 -2.234717e+03  9.551221e+03      Pseudomonas 0.284795253</span></span>
-<span><span class="co">## 11  1.880255e-02  4.906451e+01  5.429022e+02          Delftia 0.056407664</span></span>
-<span><span class="co">## 12  1.588663e-01 -2.035462e+02  1.244341e+03        Moraxella 0.238299490</span></span>
-<span><span class="co">## 13  7.322992e-01 -1.256065e+02  1.787199e+02       Paracoccus 0.893685597</span></span>
-<span><span class="co">## 14  9.675458e-01 -3.829068e+02  3.673327e+02   Dolosigranulum 0.967545761</span></span>
-<span><span class="co">## 15  2.565409e-05  1.031128e+02  2.828347e+02    Streptococcus 0.000307849</span></span>
-<span><span class="co">## 16  5.645014e-03 -1.038546e+03 -1.774423e+02   Staphylococcus 0.022580057</span></span>
-<span><span class="co">## 17  1.190195e-01 -5.847174e+02  6.664296e+01  Corynebacterium 0.357058434</span></span>
-<span><span class="co">## 18  3.165406e-01 -6.939244e+01  2.245568e+01            Other 0.633081210</span></span>
-<span><span class="co">## 19  2.320930e-04  6.646422e+01  2.178248e+02      Haemophilus 0.001392558</span></span>
-<span><span class="co">## 20  7.447380e-01 -4.123347e+00  5.766176e+00 Alkalihalophilus 0.893685597</span></span>
-<span><span class="co">## 21  5.536658e-01 -2.366135e+01  1.267958e+01    Acinetobacter 0.830498714</span></span>
-<span><span class="co">## 22  2.301937e-01 -1.542424e+02  3.710342e+01      Pseudomonas 0.552464867</span></span>
-<span><span class="co">## 23  4.793963e-01 -2.724748e+00  5.801556e+00          Delftia 0.821822226</span></span>
-<span><span class="co">## 24  8.351994e-01 -6.283053e+00  7.775254e+00        Moraxella 0.911126590</span></span>
-<span><span class="co">## 25  8.894514e-01 -9.469727e+03  1.091542e+04       Paracoccus 0.985051734</span></span>
-<span><span class="co">## 26  2.294848e-01 -8.311549e+04  1.993407e+04   Dolosigranulum 0.550763508</span></span>
-<span><span class="co">## 27  2.206109e-01 -3.560037e+03  1.542496e+04    Streptococcus 0.550763508</span></span>
-<span><span class="co">## 28  3.813862e-01 -3.550794e+04  1.358321e+04   Staphylococcus 0.762772450</span></span>
-<span><span class="co">## 29  1.285518e-01 -3.623098e+04  4.582507e+03  Corynebacterium 0.550763508</span></span>
-<span><span class="co">## 30  9.029641e-01 -3.109193e+03  3.521660e+03            Other 0.985051734</span></span>
-<span><span class="co">## 31  8.980858e-01 -5.685303e+03  6.480302e+03      Haemophilus 0.985051734</span></span>
-<span><span class="co">## 32  5.333927e-01 -1.410524e+03  7.302358e+02 Alkalihalophilus 0.914387499</span></span>
-<span><span class="co">## 33  1.142878e-01 -2.673832e+03  2.876576e+02    Acinetobacter 0.550763508</span></span>
-<span><span class="co">## 34  2.273923e-01 -1.355307e+03  5.701384e+03      Pseudomonas 0.550763508</span></span>
-<span><span class="co">## 35  9.953648e-01 -6.946678e+02  6.905619e+02          Delftia 0.995364751</span></span>
-<span><span class="co">## 36  8.201709e-01 -7.022861e+02  5.563088e+02        Moraxella 0.985051734</span></span>
-<span><span class="co">## 37  7.280091e-01 -1.781280e+06  1.244404e+06       Paracoccus 0.903867148</span></span>
-<span><span class="co">## 38  9.765692e-01 -3.644586e+06  3.755477e+06   Dolosigranulum 0.976569236</span></span>
-<span><span class="co">## 39  2.706050e-05 -2.817722e+06 -1.023743e+06    Streptococcus 0.000324726</span></span>
-<span><span class="co">## 40  5.592208e-03  1.764774e+06  1.029665e+07   Staphylococcus 0.022368834</span></span>
-<span><span class="co">## 41  1.192775e-01 -6.622778e+05  5.793218e+06  Corynebacterium 0.357832446</span></span>
-<span><span class="co">## 42  3.040091e-01 -2.170319e+05  6.957014e+05            Other 0.608018197</span></span>
-<span><span class="co">## 43  2.366803e-04 -2.173762e+06 -6.619354e+05      Haemophilus 0.001420082</span></span>
-<span><span class="co">## 44  7.900100e-01 -5.642372e+04  4.292530e+04 Alkalihalophilus 0.903867148</span></span>
-<span><span class="co">## 45  5.479895e-01 -1.253173e+05  2.361005e+05    Acinetobacter 0.821984202</span></span>
-<span><span class="co">## 46  2.301969e-01 -3.680668e+05  1.530068e+06      Pseudomonas 0.552472666</span></span>
-<span><span class="co">## 47  4.959926e-01 -5.767182e+04  2.793546e+04          Delftia 0.821984202</span></span>
-<span><span class="co">## 48  8.285449e-01 -7.769660e+04  6.223475e+04        Moraxella 0.903867148</span></span></code></pre>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ylab</a></span><span class="op">(</span><span class="st">"Relative Abundance (log CPM)"</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">p</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="st">"\n\n"</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
+<div class="section level5">
+<h5 id="acinetobacter">Acinetobacter<a class="anchor" aria-label="anchor" href="#acinetobacter"></a>
+</h5>
+<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-13-1.png" width="700"></p>
+</div>
+<div class="section level5">
+<h5 id="alkalihalophilus">Alkalihalophilus<a class="anchor" aria-label="anchor" href="#alkalihalophilus"></a>
+</h5>
+<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-13-2.png" width="700"></p>
+</div>
+<div class="section level5">
+<h5 id="anaerobacillus">Anaerobacillus<a class="anchor" aria-label="anchor" href="#anaerobacillus"></a>
+</h5>
+<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-13-3.png" width="700"></p>
+</div>
+<div class="section level5">
+<h5 id="corynebacterium">Corynebacterium<a class="anchor" aria-label="anchor" href="#corynebacterium"></a>
+</h5>
+<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-13-4.png" width="700"></p>
+</div>
+<div class="section level5">
+<h5 id="dolosigranulum">Dolosigranulum<a class="anchor" aria-label="anchor" href="#dolosigranulum"></a>
+</h5>
+<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-13-5.png" width="700"></p>
+</div>
+<div class="section level5">
+<h5 id="haemophilus">Haemophilus<a class="anchor" aria-label="anchor" href="#haemophilus"></a>
+</h5>
+<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-13-6.png" width="700"></p>
+</div>
+<div class="section level5">
+<h5 id="moraxella">Moraxella<a class="anchor" aria-label="anchor" href="#moraxella"></a>
+</h5>
+<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-13-7.png" width="700"></p>
+</div>
+<div class="section level5">
+<h5 id="other">Other<a class="anchor" aria-label="anchor" href="#other"></a>
+</h5>
+<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-13-8.png" width="700"></p>
+</div>
+<div class="section level5">
+<h5 id="paracoccus">Paracoccus<a class="anchor" aria-label="anchor" href="#paracoccus"></a>
+</h5>
+<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-13-9.png" width="700"></p>
+</div>
+<div class="section level5">
+<h5 id="pseudomonas">Pseudomonas<a class="anchor" aria-label="anchor" href="#pseudomonas"></a>
+</h5>
+<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-13-10.png" width="700"></p>
+</div>
+<div class="section level5">
+<h5 id="staphylococcus">Staphylococcus<a class="anchor" aria-label="anchor" href="#staphylococcus"></a>
+</h5>
+<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-13-11.png" width="700"></p>
+</div>
+<div class="section level5">
+<h5 id="streptococcus">Streptococcus<a class="anchor" aria-label="anchor" href="#streptococcus"></a>
+</h5>
+<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-13-12.png" width="700"></p>
+</div>
+</div>
+<div class="section level4">
+<h4 id="stacked-bar-plot">Stacked bar plot<a class="anchor" aria-label="anchor" href="#stacked-bar-plot"></a>
+</h4>
+<p>Stacked bar plots are used here to visualize the relative abundance
+of microbes at a given taxonomic level in each sample, represented as a
+single bar, labeled by time point, and plotted within each HIV exposure
+status group for separate mothers and infant comparisons. Use
+<code>plot_stacked_bar</code>.</p>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_stacked_bar.html">plot_stacked_bar</a></span><span class="op">(</span><span class="va">dat_filt</span>, <span class="st">"genus"</span>, </span>
+<span>             <span class="st">"HIVStatus"</span>,</span>
+<span>             <span class="st">"timepoint"</span>,</span>
+<span>             palette_input <span class="op">=</span> <span class="va">this_palette</span><span class="op">)</span></span></code></pre></div>
+<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-14-1.png" width="700"></p>
+</div>
+<div class="section level4">
+<h4 id="stacked-area-chart">Stacked area chart<a class="anchor" aria-label="anchor" href="#stacked-area-chart"></a>
+</h4>
+<p>Stacked area charts are similar to stacked bar plots, but provide for
+continuity between time points. These are created with
+<code><a href="../reference/plot_stacked_area.html">plot_stacked_area()</a></code>.</p>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_stacked_area.html">plot_stacked_area</a></span><span class="op">(</span><span class="va">dat_filt</span>, <span class="st">"genus"</span>, </span>
+<span>                  <span class="st">"HIVStatus"</span>,</span>
+<span>                  <span class="st">"timepoint"</span>,</span>
+<span>                  palette_input <span class="op">=</span> <span class="va">this_palette</span><span class="op">)</span></span></code></pre></div>
+<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-15-1.png" width="700"></p>
+</div>
 </div>
 </div>
 <div class="section level2">
-<h2 id="add-hotelling">Add hotelling<a class="anchor" aria-label="anchor" href="#add-hotelling"></a>
+<h2 id="longitudinal-data-analysis">Longitudinal data analysis<a class="anchor" aria-label="anchor" href="#longitudinal-data-analysis"></a>
 </h2>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/test_hotelling_t2.html">test_hotelling_t2</a></span><span class="op">(</span>dat <span class="op">=</span> <span class="va">dat_0.05</span>,</span>
-<span>                  test_index <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="va">dat_0.05</span><span class="op">$</span><span class="va">MothChild</span> <span class="op">==</span> <span class="st">"Infant"</span> <span class="op">&amp;</span></span>
-<span>                                       <span class="va">dat_0.05</span><span class="op">$</span><span class="va">timepoint</span> <span class="op">==</span> <span class="fl">6</span><span class="op">)</span>,</span>
+<p>For a concrete analysis of longitudinal microbiome data,
+<code>LegATo</code> provides NMIT, both a paired and unpaired
+multivariate Hotelling’s T-squared test, generalized estimating
+equations (GEEs) and linear mixed effects models (LMEMs/LMMs).</p>
+<p><strong>Detailed explanations of each are available on the LegATo
+website:</strong> * (NMIT)[] * Hotelling’s T-Squared Test * Modeling
+with GEEs and LMMs</p>
+<p>Otherwise a brief overview of each method is provided below.</p>
+<div class="section level3">
+<h3 id="nonparametric-microbial-interdependence-test-nmit">Nonparametric microbial interdependence test (NMIT)<a class="anchor" aria-label="anchor" href="#nonparametric-microbial-interdependence-test-nmit"></a>
+</h3>
+<p>NMIT is a multivariate distance-based test intended to evaluate the
+association between key phenotypic variables and microbial
+interdependence. The test determines longitudinal sample similarity as a
+function of temporal microbial composition.</p>
+<p>The authors thank Yilong Zhang for providing his code for adaptation
+into LegATo.</p>
+<p>Citations:</p>
+<p>Yilong Zhang, Sung Won Han, Laura M Cox, and Huilin Li. A
+multivariate distance-based analytic framework for microbial
+interdependence association test in longitudinal study. Genetic
+epidemiology, 41(8):769–778, 2017. <a href="doi:10.1002/gepi.22065" class="uri">doi:10.1002/gepi.22065</a>.</p>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">dat_0.1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/filter_animalcules_MAE.html">filter_animalcules_MAE</a></span><span class="op">(</span><span class="va">dat_cleaned</span>, <span class="fl">0.1</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/NMIT.html">NMIT</a></span><span class="op">(</span><span class="va">dat_0.1</span>, unit_var <span class="op">=</span> <span class="st">"Subject"</span>, fixed_cov <span class="op">=</span> <span class="st">"HIVStatus"</span>,</span>
+<span>     covariate_time <span class="op">=</span> <span class="st">"timepoint"</span>,</span>
+<span>     method <span class="op">=</span> <span class="st">"kendall"</span>, dist_type <span class="op">=</span> <span class="st">"F"</span>,</span>
+<span>     heatmap <span class="op">=</span> <span class="cn">TRUE</span>, classify <span class="op">=</span> <span class="cn">FALSE</span>, fill_na <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></code></pre></div>
+<p><img src="LegATo_vignette_files/figure-html/unnamed-chunk-16-1.png" width="700"></p>
+</div>
+<div class="section level3">
+<h3 id="hotellings-t2-test">Hotelling’s T^2 Test<a class="anchor" aria-label="anchor" href="#hotellings-t2-test"></a>
+</h3>
+<p>Hotelling’s T2 tests can be used to determine whether the microbiome
+profiles exhibit notable differences or trends across time and groups.
+We may then use t-tests to identify which genera contributed most to
+these differences.</p>
+<p>For this example, HEU and HUU infants are designated as the two
+sampling units on which the relative abundances of the p most abundant
+genera will be measured.</p>
+<p>For paired tests, we chose p = 6 variables to ensure that n &lt; p so
+that singularity could be avoided and T2 could be properly computed,
+where n is the number of measurements in a sampling unit. Normality is
+met by using microbe abundances in log CPM units, which is calculated
+within the function.</p>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/test_hotelling_t2.html">test_hotelling_t2</a></span><span class="op">(</span>dat <span class="op">=</span> <span class="va">dat_filt</span>,</span>
+<span>                  test_index <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="va">dat_filt</span><span class="op">$</span><span class="va">MothChild</span> <span class="op">==</span> <span class="st">"Infant"</span> <span class="op">&amp;</span></span>
+<span>                                       <span class="va">dat_filt</span><span class="op">$</span><span class="va">timepoint</span> <span class="op">==</span> <span class="fl">6</span><span class="op">)</span>,</span>
 <span>                  taxon_level <span class="op">=</span> <span class="st">"genus"</span>,</span>
 <span>                  <span class="co"># To avoid n &lt; p, use top 5-6 species</span></span>
 <span>                  num_taxa <span class="op">=</span> <span class="fl">6</span>,</span>
@@ -340,35 +1080,177 @@ Infants from Odom et al.:</p>
 <span><span class="co">## [1] 19.32953</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## $F_stat</span></span>
-<span><span class="co">## [1] 2.578132</span></span>
+<span><span class="co">## [1] 2.630189</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## $pvalue</span></span>
-<span><span class="co">## [1] 0.3056466</span></span></code></pre>
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/test_hotelling_t2.html">test_hotelling_t2</a></span><span class="op">(</span>dat <span class="op">=</span> <span class="va">dat_0.05</span>,</span>
-<span>                  test_index <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="va">dat_0.05</span><span class="op">$</span><span class="va">MothChild</span> <span class="op">==</span> <span class="st">"Mother"</span> <span class="op">&amp;</span></span>
-<span>                                      <span class="va">dat_0.05</span><span class="op">$</span><span class="va">timepoint</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span>,</span>
+<span><span class="co">## [1] 0.3009049</span></span></code></pre>
+<p>Group comparisons can also be tested on unpaired data:</p>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/test_hotelling_t2.html">test_hotelling_t2</a></span><span class="op">(</span>dat <span class="op">=</span> <span class="va">dat_filt</span>,</span>
+<span>                  test_index <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="va">dat_filt</span><span class="op">$</span><span class="va">timepoint</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span>,</span>
 <span>                  taxon_level <span class="op">=</span> <span class="st">"genus"</span>,</span>
 <span>                  <span class="co"># To avoid n &lt; p, use top 5-6 species</span></span>
-<span>                  num_taxa <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>                  num_taxa <span class="op">=</span> <span class="fl">6</span>,</span>
 <span>                  grouping_var <span class="op">=</span> <span class="st">"HIVStatus"</span>,</span>
 <span>                  unit_var <span class="op">=</span> <span class="st">"Subject"</span>,</span>
 <span>                  paired <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## $df1</span></span>
-<span><span class="co">## [1] 12</span></span>
+<span><span class="co">## [1] 6</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## $df2</span></span>
-<span><span class="co">## [1] 7</span></span>
+<span><span class="co">## [1] 13</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## $crit_F</span></span>
-<span><span class="co">## [1] 3.574676</span></span>
+<span><span class="co">## [1] 2.915269</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## $F_stat</span></span>
-<span><span class="co">## [1] 0.4781539</span></span>
+<span><span class="co">## [1] 0.8992814</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## $pvalue</span></span>
-<span><span class="co">## [1] 0.875078</span></span></code></pre>
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<span><span class="co">## [1] 0.523911</span></span></code></pre>
+</div>
+<div class="section level3">
+<h3 id="modeling">Modeling<a class="anchor" aria-label="anchor" href="#modeling"></a>
+</h3>
+<div class="section level4">
+<h4 id="generalized-estimating-equations-gees">Generalized Estimating Equations (GEEs)<a class="anchor" aria-label="anchor" href="#generalized-estimating-equations-gees"></a>
+</h4>
+<p>Generalized estimating equations (GEEs) as described in Liang and
+Zeger (1986) and extended by Agresti (2002) have been widely used for
+modeling longitudinal data, and more recently for longitudinal
+microbiome data.</p>
+<p>For each genus present in the microbial aggregate of samples, we
+model normalized log CPM relative taxon counts, estimating the effects
+of time point and HIV exposure status and their interaction, while
+accounting for the underlying structure of clusters formed by individual
+subjects.</p>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">output</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/run_gee_model.html">run_gee_model</a></span><span class="op">(</span><span class="va">dat_filt</span>, unit_var <span class="op">=</span> <span class="st">"Subject"</span>,</span>
+<span>                        fixed_cov <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"HIVStatus"</span>, <span class="st">"timepoint"</span><span class="op">)</span>,</span>
+<span>                        corstr <span class="op">=</span> <span class="st">"ar1"</span>,</span>
+<span>                        plot_out <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>                        plotsave_loc <span class="op">=</span> <span class="st">"."</span>,</span>
+<span>                        plot_terms <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">output</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span>caption <span class="op">=</span> <span class="st">"GEE Outputs"</span><span class="op">)</span></span></code></pre></div>
+<table style="width:100%;" class="table">
+<caption>GEE Outputs</caption>
+<colgroup>
+<col width="9%">
+<col width="16%">
+<col width="11%">
+<col width="7%">
+<col width="11%">
+<col width="10%">
+<col width="10%">
+<col width="12%">
+<col width="9%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">Coefficient</th>
+<th align="right">Coefficient Estimate</th>
+<th align="right">Standard Error</th>
+<th align="right">Statistic</th>
+<th align="right">Unadj p-value</th>
+<th align="right">Lower 95% CI</th>
+<th align="right">Upper 95% CI</th>
+<th align="left">Taxon</th>
+<th align="right">Adj p-value</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">54987.56051</td>
+<td align="right">45931.419</td>
+<td align="right">1.4332079</td>
+<td align="right">0.2312416</td>
+<td align="right">-35036.366</td>
+<td align="right">145011.487</td>
+<td align="left">Dolosigranulum</td>
+<td align="right">0.2774900</td>
+</tr>
+<tr class="even">
+<td align="left">(Intercept)</td>
+<td align="right">4623.16700</td>
+<td align="right">3270.381</td>
+<td align="right">1.9984006</td>
+<td align="right">0.1574653</td>
+<td align="right">-1786.661</td>
+<td align="right">11032.995</td>
+<td align="left">Streptococcus</td>
+<td align="right">0.2099537</td>
+</tr>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">10838.98320</td>
+<td align="right">4950.443</td>
+<td align="right">4.7938995</td>
+<td align="right">0.0285607</td>
+<td align="right">1136.293</td>
+<td align="right">20541.674</td>
+<td align="left">Moraxella</td>
+<td align="right">0.0856821</td>
+</tr>
+<tr class="even">
+<td align="left">(Intercept)</td>
+<td align="right">59424.34849</td>
+<td align="right">26172.622</td>
+<td align="right">5.1550681</td>
+<td align="right">0.0231786</td>
+<td align="right">8126.953</td>
+<td align="right">110721.744</td>
+<td align="left">Staphylococcus</td>
+<td align="right">0.0856821</td>
+</tr>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">46510.99927</td>
+<td align="right">20784.082</td>
+<td align="right">5.0078310</td>
+<td align="right">0.0252329</td>
+<td align="right">5774.948</td>
+<td align="right">87247.051</td>
+<td align="left">Corynebacterium</td>
+<td align="right">0.0856821</td>
+</tr>
+<tr class="even">
+<td align="left">(Intercept)</td>
+<td align="right">57.98925</td>
+<td align="right">1827.962</td>
+<td align="right">0.0010064</td>
+<td align="right">0.9746926</td>
+<td align="right">-3524.750</td>
+<td align="right">3640.729</td>
+<td align="left">Haemophilus</td>
+<td align="right">0.9746926</td>
+</tr>
+</tbody>
+</table>
+<p>You can also create plots of the covariates, which will be saved to a
+folder specified by the user:</p>
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">tempfolder</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempfile</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/files2.html" class="external-link">dir.create</a></span><span class="op">(</span><span class="va">tempfolder</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Trying out plotting</span></span>
+<span><span class="va">output</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/run_gee_model.html">run_gee_model</a></span><span class="op">(</span><span class="va">dat_filt</span>, unit_var <span class="op">=</span> <span class="st">"Subject"</span>,</span>
+<span>              taxon_level <span class="op">=</span> <span class="st">"genus"</span>,</span>
+<span>              fixed_cov <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"HIVStatus"</span>, <span class="st">"timepoint"</span><span class="op">)</span>,</span>
+<span>              corstr <span class="op">=</span> <span class="st">"ar1"</span>,</span>
+<span>              plot_out <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>              plotsave_loc <span class="op">=</span> <span class="va">tempfolder</span>,</span>
+<span>              plot_terms <span class="op">=</span> <span class="st">"timepoint"</span>,</span>
+<span>              width <span class="op">=</span> <span class="fl">6</span>, height <span class="op">=</span> <span class="fl">4</span>, units <span class="op">=</span> <span class="st">"in"</span>, scale <span class="op">=</span> <span class="fl">0.7</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/unlink.html" class="external-link">unlink</a></span><span class="op">(</span><span class="va">tempfolder</span>, recursive <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<p><img src="Dolosigranulum_timepoint.png" width="50%" style="display: block; margin: auto;"><img src="Streptococcus_timepoint.png" width="50%" style="display: block; margin: auto;"></p>
+</div>
+</div>
+</div>
+<div class="section level2">
+<h2 id="session-info">Session Info<a class="anchor" aria-label="anchor" href="#session-info"></a>
+</h2>
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html" class="external-link">sessionInfo</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">## R version 4.3.1 (2023-06-16)</span></span>
 <span><span class="co">## Platform: x86_64-pc-linux-gnu (64-bit)</span></span>
@@ -396,84 +1278,85 @@ Infants from Odom et al.:</p>
 <span><span class="co">## [1] LegATo_0.99.0    BiocStyle_2.28.0</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## loaded via a namespace (and not attached):</span></span>
-<span><span class="co">##   [1] rstudioapi_0.15.0           jsonlite_1.8.8             </span></span>
-<span><span class="co">##   [3] umap_0.2.10.0               MultiAssayExperiment_1.28.0</span></span>
-<span><span class="co">##   [5] magrittr_2.0.3              TH.data_1.1-2              </span></span>
-<span><span class="co">##   [7] estimability_1.4.1          farver_2.1.1               </span></span>
-<span><span class="co">##   [9] rmarkdown_2.25              geepack_1.3.9              </span></span>
-<span><span class="co">##  [11] fs_1.6.3                    zlibbioc_1.48.0            </span></span>
-<span><span class="co">##  [13] ragg_1.2.5                  vctrs_0.6.5                </span></span>
-<span><span class="co">##  [15] memoise_2.0.1               RCurl_1.98-1.14            </span></span>
-<span><span class="co">##  [17] askpass_1.2.0               BiocBaseUtils_1.4.0        </span></span>
-<span><span class="co">##  [19] forcats_1.0.0               htmltools_0.5.7            </span></span>
-<span><span class="co">##  [21] S4Arrays_1.2.0              haven_2.5.4                </span></span>
-<span><span class="co">##  [23] broom_1.0.5                 SparseArray_1.2.3          </span></span>
-<span><span class="co">##  [25] sass_0.4.8                  TBSignatureProfiler_1.15.0 </span></span>
-<span><span class="co">##  [27] bslib_0.6.1                 htmlwidgets_1.6.4          </span></span>
-<span><span class="co">##  [29] desc_1.4.3                  sandwich_3.1-0             </span></span>
-<span><span class="co">##  [31] plyr_1.8.9                  covr_3.6.2                 </span></span>
-<span><span class="co">##  [33] zoo_1.8-12                  emmeans_1.9.0              </span></span>
-<span><span class="co">##  [35] plotly_4.10.2               cachem_1.0.8               </span></span>
-<span><span class="co">##  [37] lifecycle_1.0.4             iterators_1.0.14           </span></span>
-<span><span class="co">##  [39] pkgconfig_2.0.3             Matrix_1.6-5               </span></span>
-<span><span class="co">##  [41] R6_2.5.1                    fastmap_1.1.1              </span></span>
-<span><span class="co">##  [43] GenomeInfoDbData_1.2.11     MatrixGenerics_1.14.0      </span></span>
-<span><span class="co">##  [45] clue_0.3-65                 digest_0.6.34              </span></span>
-<span><span class="co">##  [47] colorspace_2.1-0            spatial_7.3-16             </span></span>
-<span><span class="co">##  [49] S4Vectors_0.40.2            DESeq2_1.40.1              </span></span>
-<span><span class="co">##  [51] RSpectra_0.16-1             textshaping_0.3.6          </span></span>
-<span><span class="co">##  [53] GenomicRanges_1.54.1        vegan_2.6-4                </span></span>
-<span><span class="co">##  [55] labeling_0.4.3              fansi_1.0.6                </span></span>
-<span><span class="co">##  [57] httr_1.4.7                  abind_1.4-5                </span></span>
-<span><span class="co">##  [59] mgcv_1.8-42                 compiler_4.3.1             </span></span>
-<span><span class="co">##  [61] withr_3.0.0                 backports_1.4.1            </span></span>
-<span><span class="co">##  [63] inline_0.3.19               BiocParallel_1.36.0        </span></span>
-<span><span class="co">##  [65] highr_0.10                  MASS_7.3-60                </span></span>
-<span><span class="co">##  [67] tsne_0.1-3.1                openssl_2.1.1              </span></span>
-<span><span class="co">##  [69] DelayedArray_0.28.0         fBasics_4022.94.9000       </span></span>
-<span><span class="co">##  [71] permute_0.9-7               tools_4.3.1                </span></span>
-<span><span class="co">##  [73] ape_5.7-1                   rentrez_1.2.3              </span></span>
-<span><span class="co">##  [75] glue_1.7.0                  stabledist_0.7-1           </span></span>
-<span><span class="co">##  [77] nlme_3.1-162                grid_4.3.1                 </span></span>
-<span><span class="co">##  [79] cluster_2.1.4               reshape2_1.4.4             </span></span>
-<span><span class="co">##  [81] generics_0.1.3              gtable_0.3.4               </span></span>
-<span><span class="co">##  [83] tidyr_1.3.0                 hms_1.1.3                  </span></span>
-<span><span class="co">##  [85] data.table_1.14.10          utf8_1.2.4                 </span></span>
-<span><span class="co">##  [87] XVector_0.42.0              rmutil_1.1.10              </span></span>
-<span><span class="co">##  [89] BiocGenerics_0.48.1         ggrepel_0.9.3              </span></span>
-<span><span class="co">##  [91] foreach_1.5.2               pillar_1.9.0               </span></span>
-<span><span class="co">##  [93] stringr_1.5.1               limma_3.56.2               </span></span>
-<span><span class="co">##  [95] splines_4.3.1               dplyr_1.1.4                </span></span>
-<span><span class="co">##  [97] lattice_0.21-8              survival_3.5-5             </span></span>
-<span><span class="co">##  [99] GUniFrac_1.8                tidyselect_1.2.0           </span></span>
-<span><span class="co">## [101] locfit_1.5-9.8              knitr_1.45                 </span></span>
-<span><span class="co">## [103] bookdown_0.34               IRanges_2.36.0             </span></span>
-<span><span class="co">## [105] edgeR_3.42.4                SummarizedExperiment_1.32.0</span></span>
-<span><span class="co">## [107] stats4_4.3.1                xfun_0.41                  </span></span>
-<span><span class="co">## [109] Biobase_2.62.0              statmod_1.5.0              </span></span>
-<span><span class="co">## [111] timeDate_4032.109           matrixStats_1.2.0          </span></span>
-<span><span class="co">## [113] DT_0.28                     rex_1.2.1                  </span></span>
-<span><span class="co">## [115] stringi_1.8.3               lazyeval_0.2.2             </span></span>
-<span><span class="co">## [117] yaml_2.3.8                  evaluate_0.23              </span></span>
-<span><span class="co">## [119] codetools_0.2-19            timeSeries_4030.106.9000   </span></span>
-<span><span class="co">## [121] tibble_3.2.1                BiocManager_1.30.22        </span></span>
-<span><span class="co">## [123] cli_3.6.2                   rpart_4.1.19               </span></span>
-<span><span class="co">## [125] xtable_1.8-4                reticulate_1.30            </span></span>
-<span><span class="co">## [127] systemfonts_1.0.4           munsell_0.5.0              </span></span>
-<span><span class="co">## [129] jquerylib_0.1.4             Rcpp_1.0.12                </span></span>
-<span><span class="co">## [131] GenomeInfoDb_1.38.5         ggeffects_1.3.4            </span></span>
-<span><span class="co">## [133] stable_1.1.6                coda_0.19-4                </span></span>
-<span><span class="co">## [135] png_0.1-8                   XML_3.99-0.16              </span></span>
-<span><span class="co">## [137] parallel_4.3.1              modeest_2.4.0              </span></span>
-<span><span class="co">## [139] ellipsis_0.3.2              pkgdown_2.0.7              </span></span>
-<span><span class="co">## [141] ggplot2_3.4.4               assertthat_0.2.1           </span></span>
-<span><span class="co">## [143] animalcules_1.18.2          ggalluvial_0.12.5          </span></span>
-<span><span class="co">## [145] bitops_1.0-7                mvtnorm_1.2-4              </span></span>
-<span><span class="co">## [147] viridisLite_0.4.2           scales_1.3.0               </span></span>
-<span><span class="co">## [149] insight_0.19.7              statip_0.2.3               </span></span>
-<span><span class="co">## [151] purrr_1.0.2                 crayon_1.5.2               </span></span>
-<span><span class="co">## [153] rlang_1.1.3                 multcomp_1.4-25            </span></span>
-<span><span class="co">## [155] shinyjs_2.1.0</span></span></code></pre>
+<span><span class="co">##   [1] splines_4.3.1               bitops_1.0-7               </span></span>
+<span><span class="co">##   [3] tibble_3.2.1                XML_3.99-0.16.1            </span></span>
+<span><span class="co">##   [5] rpart_4.1.19                rex_1.2.1                  </span></span>
+<span><span class="co">##   [7] lifecycle_1.0.4             edgeR_3.42.4               </span></span>
+<span><span class="co">##   [9] lattice_0.21-8              MASS_7.3-60                </span></span>
+<span><span class="co">##  [11] insight_0.19.7              MultiAssayExperiment_1.28.0</span></span>
+<span><span class="co">##  [13] backports_1.4.1             magrittr_2.0.3             </span></span>
+<span><span class="co">##  [15] limma_3.56.2                plotly_4.10.2              </span></span>
+<span><span class="co">##  [17] sass_0.4.8                  rmarkdown_2.25             </span></span>
+<span><span class="co">##  [19] jquerylib_0.1.4             yaml_2.3.8                 </span></span>
+<span><span class="co">##  [21] askpass_1.2.0               reticulate_1.30            </span></span>
+<span><span class="co">##  [23] multcomp_1.4-25             abind_1.4-5                </span></span>
+<span><span class="co">##  [25] zlibbioc_1.48.0             GenomicRanges_1.54.1       </span></span>
+<span><span class="co">##  [27] purrr_1.0.2                 BiocGenerics_0.48.1        </span></span>
+<span><span class="co">##  [29] RCurl_1.98-1.14             TH.data_1.1-2              </span></span>
+<span><span class="co">##  [31] sandwich_3.1-0              GenomeInfoDbData_1.2.11    </span></span>
+<span><span class="co">##  [33] IRanges_2.36.0              S4Vectors_0.40.2           </span></span>
+<span><span class="co">##  [35] ggrepel_0.9.3               rmutil_1.1.10              </span></span>
+<span><span class="co">##  [37] inline_0.3.19               rentrez_1.2.3              </span></span>
+<span><span class="co">##  [39] vegan_2.6-4                 umap_0.2.10.0              </span></span>
+<span><span class="co">##  [41] RSpectra_0.16-1             spatial_7.3-16             </span></span>
+<span><span class="co">##  [43] pkgdown_2.0.7               permute_0.9-7              </span></span>
+<span><span class="co">##  [45] codetools_0.2-19            DelayedArray_0.28.0        </span></span>
+<span><span class="co">##  [47] DT_0.28                     tidyselect_1.2.0           </span></span>
+<span><span class="co">##  [49] ggeffects_1.3.4             farver_2.1.1               </span></span>
+<span><span class="co">##  [51] stable_1.1.6                matrixStats_1.2.0          </span></span>
+<span><span class="co">##  [53] stats4_4.3.1                jsonlite_1.8.8             </span></span>
+<span><span class="co">##  [55] ellipsis_0.3.2              ggalluvial_0.12.5          </span></span>
+<span><span class="co">##  [57] survival_3.5-5              iterators_1.0.14           </span></span>
+<span><span class="co">##  [59] emmeans_1.9.0               systemfonts_1.0.4          </span></span>
+<span><span class="co">##  [61] foreach_1.5.2               tools_4.3.1                </span></span>
+<span><span class="co">##  [63] ragg_1.2.5                  Rcpp_1.0.12                </span></span>
+<span><span class="co">##  [65] glue_1.7.0                  SparseArray_1.2.3          </span></span>
+<span><span class="co">##  [67] BiocBaseUtils_1.4.0         xfun_0.41                  </span></span>
+<span><span class="co">##  [69] mgcv_1.8-42                 DESeq2_1.40.1              </span></span>
+<span><span class="co">##  [71] MatrixGenerics_1.14.0       GenomeInfoDb_1.38.5        </span></span>
+<span><span class="co">##  [73] dplyr_1.1.4                 withr_3.0.0                </span></span>
+<span><span class="co">##  [75] BiocManager_1.30.22         timeSeries_4030.106.9000   </span></span>
+<span><span class="co">##  [77] fastmap_1.1.1               fansi_1.0.6                </span></span>
+<span><span class="co">##  [79] shinyjs_2.1.0               openssl_2.1.1              </span></span>
+<span><span class="co">##  [81] animalcules_1.18.2          digest_0.6.34              </span></span>
+<span><span class="co">##  [83] R6_2.5.1                    estimability_1.4.1         </span></span>
+<span><span class="co">##  [85] textshaping_0.3.6           colorspace_2.1-0           </span></span>
+<span><span class="co">##  [87] modeest_2.4.0               utf8_1.2.4                 </span></span>
+<span><span class="co">##  [89] tidyr_1.3.1                 generics_0.1.3             </span></span>
+<span><span class="co">##  [91] data.table_1.14.10          httr_1.4.7                 </span></span>
+<span><span class="co">##  [93] htmlwidgets_1.6.4           S4Arrays_1.2.0             </span></span>
+<span><span class="co">##  [95] pkgconfig_2.0.3             gtable_0.3.4               </span></span>
+<span><span class="co">##  [97] tsne_0.1-3.1                timeDate_4032.109          </span></span>
+<span><span class="co">##  [99] covr_3.6.2                  XVector_0.42.0             </span></span>
+<span><span class="co">## [101] htmltools_0.5.7             bookdown_0.34              </span></span>
+<span><span class="co">## [103] clue_0.3-65                 scales_1.3.0               </span></span>
+<span><span class="co">## [105] Biobase_2.62.0              png_0.1-8                  </span></span>
+<span><span class="co">## [107] knitr_1.45                  rstudioapi_0.15.0          </span></span>
+<span><span class="co">## [109] reshape2_1.4.4              statip_0.2.3               </span></span>
+<span><span class="co">## [111] coda_0.19-4                 nlme_3.1-162               </span></span>
+<span><span class="co">## [113] cachem_1.0.8                zoo_1.8-12                 </span></span>
+<span><span class="co">## [115] stringr_1.5.1               parallel_4.3.1             </span></span>
+<span><span class="co">## [117] fBasics_4022.94.9000        desc_1.4.3                 </span></span>
+<span><span class="co">## [119] pillar_1.9.0                grid_4.3.1                 </span></span>
+<span><span class="co">## [121] vctrs_0.6.5                 xtable_1.8-4               </span></span>
+<span><span class="co">## [123] cluster_2.1.4               paletteer_1.5.0            </span></span>
+<span><span class="co">## [125] evaluate_0.23               mvtnorm_1.2-4              </span></span>
+<span><span class="co">## [127] cli_3.6.2                   locfit_1.5-9.8             </span></span>
+<span><span class="co">## [129] compiler_4.3.1              rlang_1.1.3                </span></span>
+<span><span class="co">## [131] crayon_1.5.2                labeling_0.4.3             </span></span>
+<span><span class="co">## [133] rematch2_2.1.2              plyr_1.8.9                 </span></span>
+<span><span class="co">## [135] forcats_1.0.0               fs_1.6.3                   </span></span>
+<span><span class="co">## [137] stringi_1.8.3               viridisLite_0.4.2          </span></span>
+<span><span class="co">## [139] BiocParallel_1.36.0         TBSignatureProfiler_1.15.0 </span></span>
+<span><span class="co">## [141] assertthat_0.2.1            munsell_0.5.0              </span></span>
+<span><span class="co">## [143] lazyeval_0.2.2              geepack_1.3.9              </span></span>
+<span><span class="co">## [145] Matrix_1.6-5                hms_1.1.3                  </span></span>
+<span><span class="co">## [147] stabledist_0.7-1            ggplot2_3.4.4              </span></span>
+<span><span class="co">## [149] statmod_1.5.0               SummarizedExperiment_1.32.0</span></span>
+<span><span class="co">## [151] highr_0.10                  haven_2.5.4                </span></span>
+<span><span class="co">## [153] GUniFrac_1.8                broom_1.0.5                </span></span>
+<span><span class="co">## [155] memoise_2.0.1               bslib_0.6.1                </span></span>
+<span><span class="co">## [157] ape_5.7-1</span></span></code></pre>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>

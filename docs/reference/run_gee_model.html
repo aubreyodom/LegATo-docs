@@ -37,6 +37,9 @@ samples across many (&amp;gt;40) clusters/units."><!-- mathjax --><script src="h
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-tutorials">Tutorials</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-tutorials">
     <a class="dropdown-item" href="../articles/LegATo_vignette.html">Command Line Analysis</a>
+    <a class="dropdown-item" href="../articles/NMIT.html">NMIT</a>
+    <a class="dropdown-item" href="../articles/Modeling.html">Modeling with GEEs and LMMs</a>
+    <a class="dropdown-item" href="../articles/Hotelling.html">Hotelling's T-Squared Test</a>
   </div>
 </li>
 <li class="active nav-item">
@@ -163,20 +166,20 @@ following methods are permitted: <code>c("holm", "hochberg", "hommel",
 <span class="r-in"><span>                     fixed_cov <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"HairLength"</span>, <span class="st">"Age"</span>, <span class="st">"Group"</span>, <span class="st">"Sex"</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>                     corstr <span class="op">=</span> <span class="st">"ar1"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">out</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Coefficient Coefficient Estimate Standard Error   Statistic Unadj p-value</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 (Intercept)           14967.2309    14653.11433  1.04333323  3.070475e-01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 (Intercept)          -43274.3001    24870.23678  3.02761233  8.185840e-02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 (Intercept)            -175.3424      709.69597  0.06104203  8.048565e-01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 (Intercept)             347.2791      223.19214  2.42102630  1.197165e-01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 (Intercept)             300.2225       75.99722 15.60598450  7.800731e-05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 (Intercept)             115.5378       42.26260  7.47370218  6.260668e-03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Lower 95% CI Upper 95% CI           Taxon Adj p-value</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 -13752.34544   43686.8073   Acinetobacter 0.379293989</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 -92019.06846    5470.4683 Corynebacterium 0.245575188</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  -1566.32090    1215.6362  Staphylococcus 0.889578219</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4    -90.16945     784.7277      Paracoccus 0.272344326</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5    151.27071     449.1743        Listeria 0.001638154</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6     32.70463     198.3710        Brucella 0.043824675</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Coefficient Coefficient Estimate Standard Error  Statistic Unadj p-value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 (Intercept)            4704.2733     9242.28654  0.2590754   0.610756059</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 (Intercept)           27036.2185    13974.99000  3.7427333   0.053037617</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 (Intercept)            1139.1468      393.29821  8.3891008   0.003774776</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 (Intercept)             271.1042       84.54737 10.2818739   0.001343434</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 (Intercept)             210.2923       72.45671  8.4234430   0.003704137</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 (Intercept)             893.8138      386.92571  5.3362838   0.020885952</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Lower 95% CI Upper 95% CI              Taxon Adj p-value</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 -13410.27548   22818.8220      Acinetobacter  0.63983968</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   -354.25853   54426.6956    Corynebacterium  0.09723563</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3    368.29643    1909.9971     Staphylococcus  0.02768169</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4    105.39440     436.8140 Noviherbaspirillum  0.02768169</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5     68.27979     352.3049            Kocuria  0.02768169</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6    135.45333    1652.1742        Pseudomonas  0.04594909</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>

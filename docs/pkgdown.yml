@@ -2,9 +2,11 @@ pandoc: 3.1.1
 pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
+  Hotelling: Hotelling.html
   LegATo_vignette: LegATo_vignette.html
-  animalcules_MAE_formatting: docs/animalcules_MAE_formatting.html
-last_built: 2024-01-26T16:38Z
+  Modeling: Modeling.html
+  NMIT: NMIT.html
+last_built: 2024-01-28T19:56Z
 urls:
   reference: https://aubreyodom.github.io/LegATo-docs/reference
   article: https://aubreyodom.github.io/LegATo-docs/articles

@@ -29,6 +29,9 @@ metadata."><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/m
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-tutorials">Tutorials</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-tutorials">
     <a class="dropdown-item" href="../articles/LegATo_vignette.html">Command Line Analysis</a>
+    <a class="dropdown-item" href="../articles/NMIT.html">NMIT</a>
+    <a class="dropdown-item" href="../articles/Modeling.html">Modeling with GEEs and LMMs</a>
+    <a class="dropdown-item" href="../articles/Hotelling.html">Hotelling's T-Squared Test</a>
   </div>
 </li>
 <li class="active nav-item">
@@ -102,70 +105,70 @@ denoting a <code>SummarizedExperiment</code>.</p></dd>
 <span class="r-in"><span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu">parse_MAE_SE</span><span class="op">(</span><span class="va">in_dat</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">out</span><span class="op">$</span><span class="va">tax</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                            superkingdom         phylum               class</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_beijerinckii     Bacteria Proteobacteria Gammaproteobacteria</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_bouvetii         Bacteria Proteobacteria Gammaproteobacteria</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_guillouiae       Bacteria Proteobacteria Gammaproteobacteria</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_gyllenbergii     Bacteria Proteobacteria Gammaproteobacteria</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_indicus          Bacteria Proteobacteria Gammaproteobacteria</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_johnsonii        Bacteria Proteobacteria Gammaproteobacteria</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_parvus           Bacteria Proteobacteria Gammaproteobacteria</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                                   order        family         genus</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_beijerinckii Moraxellales Moraxellaceae Acinetobacter</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_bouvetii     Moraxellales Moraxellaceae Acinetobacter</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_guillouiae   Moraxellales Moraxellaceae Acinetobacter</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_gyllenbergii Moraxellales Moraxellaceae Acinetobacter</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_indicus      Moraxellales Moraxellaceae Acinetobacter</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_johnsonii    Moraxellales Moraxellaceae Acinetobacter</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_parvus       Moraxellales Moraxellaceae Acinetobacter</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                                               species</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_beijerinckii Acinetobacter_beijerinckii</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_bouvetii         Acinetobacter_bouvetii</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_guillouiae     Acinetobacter_guillouiae</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_gyllenbergii Acinetobacter_gyllenbergii</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_indicus           Acinetobacter_indicus</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_johnsonii       Acinetobacter_johnsonii</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_parvus             Acinetobacter_parvus</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">out</span><span class="op">$</span><span class="va">sam</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     Sample Subject    Sex Month Group Pairing HairLength      Age</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> X-1    X-1      S1 Female     1     A       1   54.59018 37.60217</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> X-2    X-2      S2 Female     1     B       1   69.32642 66.77243</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> X-3    X-3      S3 Female     1     A       2   42.91915 53.23820</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> X-4    X-4      S4 Female     1     B       2   53.18740 52.56244</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> X-5    X-5      S5 Female     1     A       3   44.28454 60.37946</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> X-6    X-6      S6 Female     1     B       3   37.66513 42.47814</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     Sample Subject    Sex Month Group Pairing HairLength  Age</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> X-1    X-1      S1   Male     1     A       1   48.62753 21.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> X-2    X-2      S2   Male     1     B       1   53.53195 67.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> X-3    X-3      S3 Female     1     A       2   47.61090 78.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> X-4    X-4      S4 Female     1     B       2   49.72870 48.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> X-5    X-5      S5 Female     1     A       3   59.04509 48.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> X-6    X-6      S6 Female     1     B       3   27.82404 29.6</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">out</span><span class="op">$</span><span class="va">counts</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                            X-1   X-2 X-3 X-4 X-5 X-6 X-7 X-8 X-9 X-10 X-11 X-12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_bouvetii     430 18103 810 103  74 503   6 482 264   56  123    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_guillouiae     0     0   0   0   0  36   0   0  48    0    0    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_gyllenbergii   0     5   0   0   0   5   5   7  28    3    0    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_indicus        6     1   1   1  11   5  11   0   2    3    4    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_johnsonii      0     0   9   0   0   0   0   0  27    0    0    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_parvus         1     0   0   2   0   0   0   0   0    0    1    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_beijerinckii 430 18103 810 103  74 503   6 482 264   56  123    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_bouvetii       0     0   0   0   0  36   0   0  48    0    0    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_guillouiae     0     5   0   0   0   5   5   7  28    3    0    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_gyllenbergii   6     1   1   1  11   5  11   0   2    3    4    6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_indicus        0     0   9   0   0   0   0   0  27    0    0    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_johnsonii      1     0   0   2   0   0   0   0   0    0    1    0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                            X-13 X-14 X-15 X-16 X-17 X-18 X-19 X-20 X-21 X-22</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_bouvetii        0    0  432    0    0    0    0    0    0  424</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_guillouiae      0    0    0    0    0   11    0    0    0   47</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_gyllenbergii    0    0    0    0    0    0    0   38    0    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_indicus         0    1    0    0   17    0    8   13   10    2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_johnsonii       0    2    0    0    0    0    0    0    0    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_parvus         10    0    0    0   71   60   11    6    8    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_beijerinckii    0    0  432    0    0    0    0    0    0  424</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_bouvetii        0    0    0    0    0   11    0    0    0   47</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_guillouiae      0    0    0    0    0    0    0   38    0    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_gyllenbergii    0    1    0    0   17    0    8   13   10    2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_indicus         0    2    0    0    0    0    0    0    0    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_johnsonii      10    0    0    0   71   60   11    6    8    0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                            X-23 X-24 X-25 X-26 X-27 X-28 X-29 X-30 X-31 X-32</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_bouvetii       23    0   31   18   12   19  900   85   13    4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_guillouiae      0    0    2    5    2    8    2    0    0    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_gyllenbergii    0    0   21    0    0    0    0 3299    0    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_indicus         2    3    2    8    0   15    2    6    5   17</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_johnsonii       0    0    0    0  813    0    0    4    0    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_parvus        272    0    0    6    1    0    0    0    0    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_beijerinckii   23    0   31   18   12   19  900   85   13    4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_bouvetii        0    0    2    5    2    8    2    0    0    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_guillouiae      0    0   21    0    0    0    0 3299    0    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_gyllenbergii    2    3    2    8    0   15    2    6    5   17</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_indicus         0    0    0    0  813    0    0    4    0    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_johnsonii     272    0    0    6    1    0    0    0    0    0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                            X-33 X-34 X-35 X-36 X-37 X-38 X-39 X-40 X-41 X-42</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_bouvetii        0  113  179    1  146    0    0    0    0    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_beijerinckii    0  113  179    1  146    0    0    0    0    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_bouvetii        0    0    0    0    0    0    0    0    0    0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_guillouiae      0    0    0    0    0    0    0    0    0    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_gyllenbergii    0    0    0    0    0    0    0    0    0    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_indicus         5    0    2    3    6    5    1    2    0    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_johnsonii       0    0    0    0    0    0    0    0    0    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_parvus          0    0    0   11    0    0    2    0    2    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_gyllenbergii    5    0    2    3    6    5    1    2    0    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_indicus         0    0    0    0    0    0    0    0    0    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_johnsonii       0    0    0   11    0    0    2    0    2    0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                            X-43 X-44 X-45 X-46 X-47 X-48 X-49 X-50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_bouvetii        0   10   10    0   46    0   44    1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_guillouiae      7    0    0    0    9    0    0    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_gyllenbergii    0    7   12    2    0   13 1779    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_indicus         2    7    4    1    0    2    0    1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_johnsonii       0    0    0    0    0    0    0    0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_parvus          0    0   24    0    0    0    0    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_beijerinckii    0   10   10    0   46    0   44    1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_bouvetii        7    0    0    0    9    0    0    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_guillouiae      0    7   12    2    0   13 1779    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_gyllenbergii    2    7    4    1    0    2    0    1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_indicus         0    0    0    0    0    0    0    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Acinetobacter_johnsonii       0    0   24    0    0    0    0    0</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">out2</span> <span class="op">&lt;-</span> <span class="fu">parse_MAE_SE</span><span class="op">(</span><span class="va">in_dat</span><span class="op">[[</span><span class="st">"MicrobeGenetics"</span><span class="op">]</span><span class="op">]</span>,</span></span>
 <span class="r-in"><span>                     which_assay <span class="op">=</span> <span class="st">"MGX"</span>, type <span class="op">=</span> <span class="st">"SE"</span><span class="op">)</span></span></span>

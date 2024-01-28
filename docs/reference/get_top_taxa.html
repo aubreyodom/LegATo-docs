@@ -29,6 +29,9 @@ and outputs the average abundances of the taxa."><!-- mathjax --><script src="ht
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-tutorials">Tutorials</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-tutorials">
     <a class="dropdown-item" href="../articles/LegATo_vignette.html">Command Line Analysis</a>
+    <a class="dropdown-item" href="../articles/NMIT.html">NMIT</a>
+    <a class="dropdown-item" href="../articles/Modeling.html">Modeling with GEEs and LMMs</a>
+    <a class="dropdown-item" href="../articles/Hotelling.html">Hotelling's T-Squared Test</a>
   </div>
 </li>
 <li class="active nav-item">
@@ -97,27 +100,28 @@ aggregate the counts data. Must be the name of a column in
 <span class="r-in"><span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu">get_top_taxa</span><span class="op">(</span><span class="va">in_dat</span>, <span class="st">"genus"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">out</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                 taxon     allmeans</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1       Acinetobacter 4.312728e-01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2     Corynebacterium 1.992574e-01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3      Staphylococcus 1.108285e-01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4          Paracoccus 8.003312e-02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5            Listeria 6.753064e-02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6            Brucella 2.506886e-02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7         Pseudomonas 1.577821e-02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8           Moraxella 1.569116e-02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9          Mycoplasma 1.524232e-02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10      Streptococcus 1.317510e-02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11          Aeromonas 8.084481e-03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12        Escherichia 7.977552e-03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13          Weissella 5.210018e-03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14      Cutibacterium 2.237225e-03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15       Enterobacter 8.210988e-04</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16        Haemophilus 5.617362e-04</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17            Kocuria 5.020958e-04</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18   Alkalihalophilus 3.584481e-04</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19              Other 2.604820e-04</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20            Delftia 7.156670e-05</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21 Noviherbaspirillum 3.721576e-05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1       Acinetobacter 4.393573e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2     Corynebacterium 1.787561e-01</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3      Staphylococcus 9.218562e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  Noviherbaspirillum 6.755399e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5             Kocuria 6.213396e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6         Pseudomonas 2.661071e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7            Brucella 2.273844e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8    Alkalihalophilus 2.191473e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9           Weissella 1.575164e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10           Listeria 1.569116e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11          Moraxella 1.527953e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12      Streptococcus 1.295274e-02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13       Enterobacter 8.513321e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14              Other 8.108827e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15        Haemophilus 5.898783e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16          Aeromonas 3.512574e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17         Paracoccus 1.746868e-03</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18     Dolosigranulum 5.219494e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19         Mycoplasma 3.750489e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20            Delftia 2.991494e-04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21      Cutibacterium 7.156670e-05</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22        Escherichia 2.596714e-05</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>

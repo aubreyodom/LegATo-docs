@@ -29,6 +29,9 @@ more easily for plotting counts data."><!-- mathjax --><script src="https://cdnj
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-tutorials">Tutorials</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-tutorials">
     <a class="dropdown-item" href="../articles/LegATo_vignette.html">Command Line Analysis</a>
+    <a class="dropdown-item" href="../articles/NMIT.html">NMIT</a>
+    <a class="dropdown-item" href="../articles/Modeling.html">Modeling with GEEs and LMMs</a>
+    <a class="dropdown-item" href="../articles/Hotelling.html">Hotelling's T-Squared Test</a>
   </div>
 </li>
 <li class="active nav-item">
@@ -108,24 +111,21 @@ log CPM assay will also be created. Default is <code>TRUE</code>.</p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">in_dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/MAE_small.RDS"</span>, package <span class="op">=</span> <span class="st">"LegATo"</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html" class="external-link">readRDS</a></span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu">get_long_data</span><span class="op">(</span><span class="va">in_dat</span>, <span class="st">"genus"</span>, log <span class="op">=</span> <span class="cn">TRUE</span>, counts_to_CPM <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Registered S3 method overwritten by 'rmutil':</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   method         from</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>   print.response httr</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">out</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           taxon Sample Subject    Sex Month Group Pairing HairLength      Age</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Acinetobacter    X-1      S1 Female     1     A       1   54.59018 37.60217</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 Acinetobacter    X-2      S2 Female     1     B       1   69.32642 66.77243</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 Acinetobacter    X-3      S3 Female     1     A       2   42.91915 53.23820</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 Acinetobacter    X-4      S4 Female     1     B       2   53.18740 52.56244</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 Acinetobacter    X-5      S5 Female     1     A       3   44.28454 60.37946</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 Acinetobacter    X-6      S6 Female     1     B       3   37.66513 42.47814</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           taxon Sample Subject    Sex Month Group Pairing HairLength  Age</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Acinetobacter    X-1      S1   Male     1     A       1   48.62753 21.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 Acinetobacter    X-2      S2   Male     1     B       1   53.53195 67.7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 Acinetobacter    X-3      S3 Female     1     A       2   47.61090 78.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 Acinetobacter    X-4      S4 Female     1     B       2   49.72870 48.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 Acinetobacter    X-5      S5 Female     1     A       3   59.04509 48.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 Acinetobacter    X-6      S6 Female     1     B       3   27.82404 29.6</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Sample_id Abundance</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1       X-1      4484</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2       X-2     19992</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3       X-3    150783</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4       X-4       886</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5       X-5      1008</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6       X-6      1928</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1       X-1      4518</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2       X-2     20029</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3       X-3    150813</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4       X-4       920</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5       X-5      1185</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6       X-6      2311</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
