@@ -49,6 +49,9 @@
     <loc>https://aubreyodom.github.io/LegATo-docs/reference/create_formatted_MAE.html</loc>
   </url>
   <url>
+    <loc>https://aubreyodom.github.io/LegATo-docs/reference/distinctColors.html</loc>
+  </url>
+  <url>
     <loc>https://aubreyodom.github.io/LegATo-docs/reference/filter_animalcules_MAE.html</loc>
   </url>
   <url>
@@ -73,6 +76,9 @@
     <loc>https://aubreyodom.github.io/LegATo-docs/reference/plot_alluvial.html</loc>
   </url>
   <url>
+    <loc>https://aubreyodom.github.io/LegATo-docs/reference/plot_heatmap.html</loc>
+  </url>
+  <url>
     <loc>https://aubreyodom.github.io/LegATo-docs/reference/plot_spaghetti.html</loc>
   </url>
   <url>
@@ -83,6 +89,9 @@
   </url>
   <url>
     <loc>https://aubreyodom.github.io/LegATo-docs/reference/run_gee_model.html</loc>
+  </url>
+  <url>
+    <loc>https://aubreyodom.github.io/LegATo-docs/reference/run_lmm_model.html</loc>
   </url>
   <url>
     <loc>https://aubreyodom.github.io/LegATo-docs/reference/test_hotelling_t2.html</loc>
