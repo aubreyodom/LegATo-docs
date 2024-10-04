@@ -43,6 +43,9 @@
     <loc>https://aubreyodom.github.io/LegATo-docs/reference/NMIT.html</loc>
   </url>
   <url>
+    <loc>https://aubreyodom.github.io/LegATo-docs/reference/clean_MAE.html</loc>
+  </url>
+  <url>
     <loc>https://aubreyodom.github.io/LegATo-docs/reference/clean_animalcules_MAE.html</loc>
   </url>
   <url>
@@ -50,6 +53,9 @@
   </url>
   <url>
     <loc>https://aubreyodom.github.io/LegATo-docs/reference/distinctColors.html</loc>
+  </url>
+  <url>
+    <loc>https://aubreyodom.github.io/LegATo-docs/reference/filter_MAE.html</loc>
   </url>
   <url>
     <loc>https://aubreyodom.github.io/LegATo-docs/reference/filter_animalcules_MAE.html</loc>
@@ -89,6 +95,9 @@
   </url>
   <url>
     <loc>https://aubreyodom.github.io/LegATo-docs/reference/run_gee_model.html</loc>
+  </url>
+  <url>
+    <loc>https://aubreyodom.github.io/LegATo-docs/reference/run_lm_model.html</loc>
   </url>
   <url>
     <loc>https://aubreyodom.github.io/LegATo-docs/reference/run_lmm_model.html</loc>

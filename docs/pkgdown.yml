@@ -1,12 +1,9 @@
-pandoc: 3.1.1
-pkgdown: 2.0.7
+pandoc: 3.1.11
+pkgdown: 2.0.9
 pkgdown_sha: ~
 articles:
-  Hotelling: Hotelling.html
   LegATo_vignette: LegATo_vignette.html
-  Modeling: Modeling.html
-  NMIT: NMIT.html
-last_built: 2024-01-30T19:19Z
+last_built: 2024-10-04T20:00Z
 urls:
   reference: https://aubreyodom.github.io/LegATo-docs/reference
   article: https://aubreyodom.github.io/LegATo-docs/articles
