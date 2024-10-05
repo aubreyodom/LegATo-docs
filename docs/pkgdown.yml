@@ -3,7 +3,7 @@ pkgdown: 2.0.9
 pkgdown_sha: ~
 articles:
   LegATo_vignette: LegATo_vignette.html
-last_built: 2024-10-04T20:00Z
+last_built: 2024-10-05T02:28Z
 urls:
   reference: https://aubreyodom.github.io/LegATo-docs/reference
   article: https://aubreyodom.github.io/LegATo-docs/articles
